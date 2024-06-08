@@ -1,6 +1,5 @@
 ﻿using Financas.Pessoais.Application.Interfaces;
-using Financas.Pessoais.Domain.Entidades;
-using Microsoft.AspNetCore.Authorization;
+using Financas.Pessoais.Domain.Models.InputModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Financas.Pessoais.API.Controllers
@@ -19,7 +18,7 @@ namespace Financas.Pessoais.API.Controllers
         }
 
         [HttpPost("categoria")]
-        public async Task<IActionResult> IncluirCategoria(Categoria categoria)
+        public async Task<IActionResult> IncluirCategoria(CategoriaInputModel categoria)
         {
             await _categoriasService.IncluirCategoriaAsync(categoria);
             return Ok(categoria);

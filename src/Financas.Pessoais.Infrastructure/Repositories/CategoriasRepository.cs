@@ -1,13 +1,9 @@
 ﻿using Dapper;
-using Financas.Pessoais.Domain.Entidades;
+using Financas.Pessoais.Domain.Models.InputModels;
+using Financas.Pessoais.Domain.Models.ViewModels;
 using Financas.Pessoais.Infrastructure.Interfaces;
 using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Financas.Pessoais.Infrastructure.Repositories
 {
@@ -20,25 +16,25 @@ namespace Financas.Pessoais.Infrastructure.Repositories
             this.connectionString = connectionString;
         }
 
-        public async Task IncluirCategoriaAsync(Categoria categoria)
+        public async Task IncluirCategoriaAsync(CategoriaInputModel categoria)
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "INSERT INTO TB_CATEGORIAS (Descricao, DataCriacao) VALUES (@Descricao, @DataCriacao)";
+                var sql = "INSERT INTO TB_CATEGORIAS (Descricao) VALUES (@Descricao)";
                 await connection.ExecuteAsync(sql, categoria);
             }
         }
 
-        public async Task<IEnumerable<Categoria>> ObterCategoriasAsync()
+        public async Task<IEnumerable<CategoriaViewModel>> ObterCategoriasAsync()
         {
             using (var connection = new SqlConnection(connectionString))
             {
                 var sql = "SELECT * FROM TB_CATEGORIAS ORDER BY DESCRICAO";
-                return await connection.QueryAsync<Categoria>(sql);
+                return await connection.QueryAsync<CategoriaViewModel>(sql);
             }
         }
 
-        public Task<IEnumerable<Categoria>> ObterCategoriasPorDescricaoAsync(string descricao)
+        public Task<IEnumerable<CategoriaViewModel>> ObterCategoriasPorDescricaoAsync(string descricao)
         {
             throw new NotImplementedException();
         }
