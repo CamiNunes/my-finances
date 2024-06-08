@@ -1,5 +1,6 @@
 ﻿using Financas.Pessoais.Application.Interfaces;
 using Financas.Pessoais.Domain.Entidades;
+using Financas.Pessoais.Domain.Models.InputModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -19,7 +20,7 @@ namespace Financas.Pessoais.API.Controllers
         }
 
         [HttpPost("receita")]
-        public async Task<IActionResult> IncluirReceita(Receitas receitas)
+        public async Task<IActionResult> IncluirReceita(ReceitasInputModel receitas)
         {
             await _receitasService.IncluirReceitaAsync(receitas);
             return Ok("Receita registrada com sucesso.");
