@@ -1,14 +1,9 @@
-﻿using Financas.Pessoais.Domain.Entidades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Financas.Pessoais.Domain.Models.InputModels;
 
 namespace Financas.Pessoais.Application.Interfaces
 {
     public interface IDespesasService
     {
-        Task IncluirDespesaAsync(Despesas receita);
+        Task IncluirDespesaAsync(DespesasInputModel receita);
     }
 }

@@ -1,6 +1,5 @@
 ﻿using Financas.Pessoais.Application.Interfaces;
-using Financas.Pessoais.Domain.Entidades;
-using Microsoft.AspNetCore.Authorization;
+using Financas.Pessoais.Domain.Models.InputModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Financas.Pessoais.API.Controllers
@@ -17,7 +16,7 @@ namespace Financas.Pessoais.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> IncluirDespesa(Despesas despesas)
+        public async Task<IActionResult> IncluirDespesa(DespesasInputModel despesas)
         {
             await _despesasService.IncluirDespesaAsync(despesas);
             return Ok("Despesa registrada com sucesso.");
