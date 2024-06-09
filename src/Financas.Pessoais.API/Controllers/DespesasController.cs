@@ -1,12 +1,14 @@
 ﻿using Financas.Pessoais.Application.Interfaces;
 using Financas.Pessoais.Domain.FluntContratos;
 using Financas.Pessoais.Domain.Models.InputModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Financas.Pessoais.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class DespesasController : ControllerBase
     {
         private readonly IDespesasService _despesasService;
@@ -42,17 +44,69 @@ namespace Financas.Pessoais.API.Controllers
         }
 
         [HttpGet("listar-despesas")]
-        public async Task<IActionResult> ObterReceitas()
+        public async Task<IActionResult> ObterDespesas()
         {
-            var result = await _despesasService.ObterDespesasAsync();
-            return Ok(result);
+            try
+            {
+                var result = await _despesasService.ObterDespesasAsync();
+
+                if (result == null || !result.Any())
+                {
+                    return NotFound("Nenhuma despesa encontrada.");
+                }
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
         }
 
         [HttpGet("despesas/{descricao}")]
-        public async Task<IActionResult> ObterReceitasPorDescricao(string descricao)
+        public async Task<IActionResult> ObterDespesasPorDescricao(string descricao)
         {
-            var result = await _despesasService.ObterDespesasPorDescricaoAsync(descricao);
-            return Ok(result);
+            try
+            {
+                if (string.IsNullOrEmpty(descricao))
+                {
+                    return BadRequest("A descrição não pode ser vazia.");
+                }
+
+                var result = await _despesasService.ObterDespesasPorDescricaoAsync(descricao);
+
+                if (result == null || !result.Any())
+                {
+                    return NotFound($"Nenhuma despesa encontrada com a descrição '{descricao}'.");
+                }
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
+        }
+
+        [HttpDelete("despesas/{id}")]
+        public async Task<IActionResult> ExcluirDespesa(Guid id)
+        {
+            try
+            {
+                if (id == Guid.Empty)
+                {
+                    return BadRequest("O ID da despesa é inválido.");
+                }
+
+                await _despesasService.ExcluirDespesaAsync(id);
+
+                return NoContent(); // Retorna código 204 (No Content) se a exclusão for bem-sucedida
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) here if necessary
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
         }
     }
 }

@@ -43,5 +43,10 @@ namespace Financas.Pessoais.Application.Services
         {
             return await _despesasRepository.ObterDespesasPorDescricaoAsync(descricao);
         }
+
+        public async Task ExcluirDespesaAsync(Guid despesaId)
+        {
+            await _despesasRepository.ExcluirDespesaAsync(despesaId);
+        }
     }
 }

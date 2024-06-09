@@ -9,5 +9,6 @@ namespace Financas.Pessoais.Application.Interfaces
         Task IncluirReceitaAsync(ReceitasInputModel receita);
         Task<IEnumerable<ReceitasViewModel>> ObterReceitasAsync();
         Task<IEnumerable<ReceitasViewModel>> ObterReceitasPorDescricaoAsync(string descricao);
+        Task ExcluirReceitaAsync(Guid receitaId);
     }
 }

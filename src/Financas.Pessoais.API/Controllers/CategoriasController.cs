@@ -1,12 +1,14 @@
 ﻿using Financas.Pessoais.Application.Interfaces;
 using Financas.Pessoais.Domain.FluntContracts;
 using Financas.Pessoais.Domain.Models.InputModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Financas.Pessoais.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoriasController : ControllerBase
     {
         private readonly ICategoriasService _categoriasService;
@@ -34,8 +36,21 @@ namespace Financas.Pessoais.API.Controllers
         [HttpGet("listar-categorias")]
         public async Task<IActionResult> ObterCategorias()
         {
-            var result = await _categoriasService.ObterCategoriasAsync();
-            return Ok(result);
+            try
+            {
+                var result = await _categoriasService.ObterCategoriasAsync();
+
+                if (result == null || !result.Any())
+                {
+                    return NotFound("Nenhuma categoria encontrada.");
+                }
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
         }
 
         [HttpDelete("{id}")]

@@ -1,8 +1,10 @@
 ﻿using Financas.Pessoais.Application.Interfaces;
+using Financas.Pessoais.Domain.Entidades;
 using Financas.Pessoais.Domain.Enums;
 using Financas.Pessoais.Domain.Models.InputModels;
 using Financas.Pessoais.Domain.Models.ViewModels;
 using Financas.Pessoais.Infrastructure.Interfaces;
+using Financas.Pessoais.Infrastructure.Repositories;
 
 namespace Financas.Pessoais.Application.Services
 {
@@ -40,6 +42,11 @@ namespace Financas.Pessoais.Application.Services
         public async Task<IEnumerable<ReceitasViewModel>> ObterReceitasPorDescricaoAsync(string descricao)
         {
             return await _receitasRepository.ObterReceitasPorDescricaoAsync(descricao);
+        }
+
+        public async Task ExcluirReceitaAsync(Guid receitaId)
+        {
+            await _receitasRepository.ExcluirReceitaAsync(receitaId);
         }
     }
 }

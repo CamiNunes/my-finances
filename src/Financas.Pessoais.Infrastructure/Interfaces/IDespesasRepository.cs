@@ -8,5 +8,6 @@ namespace Financas.Pessoais.Infrastructure.Interfaces
         Task IncluirDespesaAsync(DespesasInputModel receita);
         Task<IEnumerable<DespesasViewModel>> ObterDespesasAsync();
         Task<IEnumerable<DespesasViewModel>> ObterDespesasPorDescricaoAsync(string descricao);
+        Task ExcluirDespesaAsync(Guid despesaId);
     }
 }

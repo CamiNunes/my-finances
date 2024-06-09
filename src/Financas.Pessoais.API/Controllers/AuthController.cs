@@ -2,7 +2,6 @@
 using Financas.Pessoais.Domain.Entidades;
 using Financas.Pessoais.Domain.Models;
 using Financas.Pessoais.Infrastructure.Interfaces;
-using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Financas.Pessoais.API.Controllers

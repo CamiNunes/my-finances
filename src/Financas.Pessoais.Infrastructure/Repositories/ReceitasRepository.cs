@@ -3,6 +3,7 @@ using Financas.Pessoais.Domain.Models.InputModels;
 using Financas.Pessoais.Domain.Models.ViewModels;
 using Financas.Pessoais.Infrastructure.Interfaces;
 using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace Financas.Pessoais.Infrastructure.Repositories
 {
@@ -40,6 +41,17 @@ namespace Financas.Pessoais.Infrastructure.Repositories
                 // Corrigindo a consulta SQL para usar o parâmetro e a cláusula LIKE corretamente
                 var sql = "SELECT * FROM TB_RECEITAS WHERE Descricao LIKE '%' + @Descricao + '%'";
                 return await connection.QueryAsync<ReceitasViewModel>(sql, new { Descricao = descricao });
+            }
+        }
+
+        public async Task ExcluirReceitaAsync(Guid receitaId)
+        {
+            const string query = "DELETE FROM TB_RECEITAS WHERE Id = @ReceitaId";
+
+            using (IDbConnection dbConnection = new SqlConnection(connectionString))
+            {
+                var parameters = new { ReceitaId = receitaId };
+                await dbConnection.ExecuteAsync(query, parameters);
             }
         }
     }

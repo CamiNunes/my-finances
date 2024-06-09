@@ -1,13 +1,16 @@
 ﻿using Financas.Pessoais.Application.Interfaces;
+using Financas.Pessoais.Application.Services;
 using Financas.Pessoais.Domain.Entidades;
 using Financas.Pessoais.Domain.FluntContratos;
 using Financas.Pessoais.Domain.Models.InputModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Financas.Pessoais.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ReceitasController : ControllerBase
     {
         private readonly IReceitasService _receitasService;
@@ -46,19 +49,75 @@ namespace Financas.Pessoais.API.Controllers
             return Ok(receita);
         }
 
-
         [HttpGet("listar-receitas")]
         public async Task<IActionResult> ObterReceitas()
         {
-            var result = await _receitasService.ObterReceitasAsync();
-            return Ok(result);
+            try
+            {
+                var result = await _receitasService.ObterReceitasAsync();
+
+                if (result == null || !result.Any())
+                {
+                    return NotFound("Nenhuma receita encontrada.");
+                }
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
         }
 
         [HttpGet("receitas/{descricao}")]
         public async Task<IActionResult> ObterReceitasPorDescricao(string descricao)
         {
-            var result = await _receitasService.ObterReceitasPorDescricaoAsync(descricao);
-            return Ok(result);
+            try
+            {
+                if (string.IsNullOrWhiteSpace(descricao))
+                {
+                    return BadRequest("A descrição não pode ser vazia.");
+                }
+
+                if (descricao.Length > 50)
+                {
+                    return BadRequest("A descrição não pode exceder 50 caracteres.");
+                }
+
+                var result = await _receitasService.ObterReceitasPorDescricaoAsync(descricao);
+
+                if (result == null || !result.Any())
+                {
+                    return NotFound("Nenhuma receita encontrada com a descrição fornecida.");
+                }
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
+        }
+
+        [HttpDelete("receitas/{id}")]
+        public async Task<IActionResult> ExcluirDespesa(Guid id)
+        {
+            try
+            {
+                if (id == Guid.Empty)
+                {
+                    return BadRequest("O ID da receita é inválido.");
+                }
+
+                await _receitasService.ExcluirReceitaAsync(id);
+
+                return NoContent(); // Retorna código 204 (No Content) se a exclusão for bem-sucedida
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) here if necessary
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
         }
     }
 }
