@@ -1,4 +1,5 @@
 ﻿using Financas.Pessoais.Application.Interfaces;
+using Financas.Pessoais.Domain.FluntContracts;
 using Financas.Pessoais.Domain.Models.InputModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,12 @@ namespace Financas.Pessoais.API.Controllers
         [HttpPost("categoria")]
         public async Task<IActionResult> IncluirCategoria(CategoriaInputModel categoria)
         {
+            var contract = new CategoriaInputModelContrato(categoria);
+            if (!contract.IsValid)
+            {
+                return BadRequest(contract.Notifications);
+            }
+
             await _categoriasService.IncluirCategoriaAsync(categoria);
             return Ok(categoria);
         }

@@ -1,9 +1,7 @@
 ﻿using Financas.Pessoais.Application.Interfaces;
 using Financas.Pessoais.Domain.Entidades;
+using Financas.Pessoais.Domain.FluntContratos;
 using Financas.Pessoais.Domain.Models.InputModels;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Financas.Pessoais.API.Controllers
@@ -20,11 +18,34 @@ namespace Financas.Pessoais.API.Controllers
         }
 
         [HttpPost("receita")]
-        public async Task<IActionResult> IncluirReceita(ReceitasInputModel receitas)
+        public async Task<IActionResult> IncluirReceita([FromBody] ReceitasInputModel receitasInputModel)
         {
-            await _receitasService.IncluirReceitaAsync(receitas);
-            return Ok("Receita registrada com sucesso.");
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var contract = new ReceitasInputModelContrato(receitasInputModel);
+            if (!contract.IsValid)
+            {
+                return BadRequest(contract.Notifications);
+            }
+
+            // Mapeie o modelo de entrada para a entidade de domínio, se necessário
+            var receita = new ReceitasInputModel // Supondo que Receita seja sua entidade de domínio
+            {
+                Recebido = receitasInputModel.Recebido,
+                DataRecebimento = receitasInputModel.DataRecebimento ?? DateTime.MinValue, // Use MinValue ou uma lógica padrão
+                TipoReceita = receitasInputModel.TipoReceita,
+                Valor = receitasInputModel.Valor,
+                Descricao = receitasInputModel.Descricao,
+                Categoria = receitasInputModel.Categoria
+            };
+
+            await _receitasService.IncluirReceitaAsync(receita);
+            return Ok(receita);
         }
+
 
         [HttpGet("listar-receitas")]
         public async Task<IActionResult> ObterReceitas()
