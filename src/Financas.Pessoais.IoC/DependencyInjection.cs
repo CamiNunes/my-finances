@@ -23,7 +23,7 @@ namespace Financas.Pessoais.IoC
                 configuration));
 
             // Domain Layer
-            services.AddScoped<IDespesasRepository, DespesasRepository>();
+            services.AddScoped<IDespesasRepository>(provider => new DespesasRepository(connectionString));
             services.AddScoped<IReceitasRepository>(provider => new ReceitasRepository(connectionString));
             services.AddScoped<ICategoriasRepository>(provider => new CategoriasRepository(connectionString));
             services.AddScoped<IUserRepository>(provider => new UserRepository(connectionString));

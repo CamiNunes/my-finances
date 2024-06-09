@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using Financas.Pessoais.Domain.Entidades;
 using Financas.Pessoais.Domain.Models.InputModels;
 using Financas.Pessoais.Domain.Models.ViewModels;
 using Financas.Pessoais.Infrastructure.Interfaces;
@@ -43,6 +42,5 @@ namespace Financas.Pessoais.Infrastructure.Repositories
                 return await connection.QueryAsync<ReceitasViewModel>(sql, new { Descricao = descricao });
             }
         }
-
     }
 }

@@ -17,14 +17,14 @@ namespace Financas.Pessoais.Application.Services
 
         public async Task IncluirReceitaAsync(ReceitasInputModel receita)
         {
-            bool recebido = receita.Recebido=true;
+            //bool recebido = receita.Recebido=true;
 
             var novaReceita = new ReceitasInputModel
             {
                 Descricao = receita.Descricao,
                 TipoReceita = receita.TipoReceita == TipoReceitaEnum.Pessoal ? TipoReceitaEnum.Pessoal : TipoReceitaEnum.Casa,
                 Valor = receita.Valor,
-                Recebido = recebido, // Recebido agora é definido de acordo com o valor de "Sim" ou "Não"
+                Recebido = receita.Recebido, // Recebido agora é definido de acordo com o valor de "Sim" ou "Não"
                 DataRecebimento = receita.DataRecebimento,
                 Categoria = receita.Categoria
             };
