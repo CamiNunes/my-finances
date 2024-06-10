@@ -1,4 +1,5 @@
 ﻿using Financas.Pessoais.Infrastructure.Interfaces;
+using Financas.Pessoais.Infrastructure.Seguranca;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -66,8 +67,8 @@ namespace Financas.Pessoais.Application.Services
 
         private bool VerifyPassword(string password, string storedHash)
         {
-            // Implement your password verification logic here
-            return password == storedHash; // Simplified for example purposes
+            string hashedPassword = PasswordHasher.HashPassword(password);
+            return hashedPassword == storedHash; // Simplified for example purposes
         }
     }
 }

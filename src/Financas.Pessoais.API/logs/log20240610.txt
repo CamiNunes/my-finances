@@ -217,3 +217,79 @@
 2024-06-10 18:49:31.753 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Register (Financas.Pessoais.API) in 23234.1847ms
 2024-06-10 18:49:31.753 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Register (Financas.Pessoais.API)'
 2024-06-10 18:49:31.754 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/register - 200 null text/plain; charset=utf-8 24112.3114ms
+2024-06-10 19:02:50.912 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-10 19:02:51.126 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-10 19:02:51.126 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-10 19:02:51.128 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-10 19:02:51.129 -03:00 [INF] Hosting environment: Development
+2024-06-10 19:02:51.129 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-10 19:02:52.086 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-10 19:02:52.351 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 272.2447ms
+2024-06-10 19:02:52.360 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-10 19:02:52.366 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 6.1958ms
+2024-06-10 19:02:52.395 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-10 19:02:52.444 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.6866ms
+2024-06-10 19:02:52.765 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-10 19:02:52.976 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 213.7425ms
+2024-06-10 19:02:57.783 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Categorias/listar-categorias - null null
+2024-06-10 19:02:58.564 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-10 19:02:58.569 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-10 19:02:58.569 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Categorias/listar-categorias - 401 null application/json 786.3441ms
+2024-06-10 19:27:30.822 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-10 19:27:31.041 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-10 19:27:31.041 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-10 19:27:31.043 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-10 19:27:31.043 -03:00 [INF] Hosting environment: Development
+2024-06-10 19:27:31.043 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-10 19:27:31.796 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-10 19:27:31.981 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 190.1243ms
+2024-06-10 19:27:31.992 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-10 19:27:31.999 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 8.0556ms
+2024-06-10 19:27:32.022 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-10 19:27:32.069 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.6685ms
+2024-06-10 19:27:32.203 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-10 19:27:32.331 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 128.1925ms
+2024-06-10 19:27:55.927 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-10 19:27:55.937 -03:00 [INF] CORS policy execution successful.
+2024-06-10 19:27:56.767 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-10 19:27:56.786 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-10 19:28:04.355 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-10 19:29:04.055 -03:00 [WRN] Login falhou para o email: cvn.camila@gmail.com
+2024-06-10 19:29:06.763 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-06-10 19:29:06.778 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 69989.3598ms
+2024-06-10 19:29:06.778 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-10 19:29:06.779 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 401 null application/problem+json; charset=utf-8 70853.3183ms
+2024-06-10 19:30:35.038 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-10 19:30:35.296 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-10 19:30:35.296 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-10 19:30:35.298 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-10 19:30:35.298 -03:00 [INF] Hosting environment: Development
+2024-06-10 19:30:35.298 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-10 19:30:36.209 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-10 19:30:36.388 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 182.0067ms
+2024-06-10 19:30:36.400 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-10 19:30:36.405 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 5.8335ms
+2024-06-10 19:30:36.431 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-10 19:30:36.467 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.746ms
+2024-06-10 19:30:36.616 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-10 19:30:36.803 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 186.5315ms
+2024-06-10 19:31:19.181 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-10 19:31:19.192 -03:00 [INF] CORS policy execution successful.
+2024-06-10 19:31:19.247 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-10 19:31:19.264 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-10 19:31:21.578 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-10 19:32:29.934 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-10 19:32:31.064 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-10 19:32:31.143 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 71876.1692ms
+2024-06-10 19:32:31.144 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-10 19:32:31.144 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 71964.0847ms
+2024-06-10 19:32:54.375 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Categorias/listar-categorias - null null
+2024-06-10 19:32:54.429 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.CategoriasController.ObterCategorias (Financas.Pessoais.API)'
+2024-06-10 19:32:54.432 -03:00 [INF] Route matched with {action = "ObterCategorias", controller = "Categorias"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterCategorias() on controller Financas.Pessoais.API.Controllers.CategoriasController (Financas.Pessoais.API).
+2024-06-10 19:32:54.434 -03:00 [INF] Endpoint 'ObterCategorias' foi chamado.
+2024-06-10 19:32:54.445 -03:00 [INF] Categorias encontradas: [{"Id":"2bdd4108-e5bf-4024-b410-40296c272a83","Descricao":"Banco","$type":"CategoriaViewModel"},{"Id":"1e484e8c-12c4-4dc1-b728-43397b927621","Descricao":"Carro","$type":"CategoriaViewModel"},{"Id":"e5e1fe84-6a4d-4f55-a475-08d7a5d5167d","Descricao":"Cartão de Crédito","$type":"CategoriaViewModel"},{"Id":"06d8e8e4-2a3f-4185-bd4c-22c3231bf711","Descricao":"Casa","$type":"CategoriaViewModel"},{"Id":"d657aec4-bc71-44cc-a811-600b81377fc2","Descricao":"Estudos","$type":"CategoriaViewModel"},{"Id":"2376d841-0277-44ef-9fa4-781aa76e82d0","Descricao":"Financiamento","$type":"CategoriaViewModel"},{"Id":"22e7d28e-5a28-4d71-a338-4fa7dd22425a","Descricao":"Investimentos","$type":"CategoriaViewModel"},{"Id":"c497654d-3901-40e6-a328-6d4f07dab5ce","Descricao":"Mercado","$type":"CategoriaViewModel"},{"Id":"1df82080-879a-4943-8467-ee1d64cd55ab","Descricao":"Salário","$type":"CategoriaViewModel"},{"Id":"83eb93ee-18a0-4604-abd5-93357cf0a25f","Descricao":"Saúde","$type":"CategoriaViewModel"}]
+2024-06-10 19:32:54.448 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Financas.Pessoais.Domain.Models.ViewModels.CategoriaViewModel, Financas.Pessoais.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-10 19:32:54.454 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.CategoriasController.ObterCategorias (Financas.Pessoais.API) in 21.0326ms
+2024-06-10 19:32:54.454 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.CategoriasController.ObterCategorias (Financas.Pessoais.API)'
+2024-06-10 19:32:54.454 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Categorias/listar-categorias - 200 null application/json; charset=utf-8 79.6741ms
