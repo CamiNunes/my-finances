@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Financas.Pessoais.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +13,6 @@ namespace Financas.Pessoais.Domain.Entidades
         public string Username { get; set; } = string.Empty;
         public string PasswordHash { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
+        public TipoUsuario TipoUsuario { get; set; } // Adicionando o campo TipoUsuario
     }
 }

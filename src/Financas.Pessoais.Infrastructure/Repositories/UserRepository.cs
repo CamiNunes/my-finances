@@ -23,7 +23,7 @@ namespace Financas.Pessoais.Infrastructure.Repositories
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                const string query = "INSERT INTO TB_USUARIOS (Username, PasswordHash, Email) VALUES (@Username, @PasswordHash, @Email)";
+                const string query = "INSERT INTO TB_USUARIOS (Username, PasswordHash, Email, TipoUsuario) VALUES (@Username, @PasswordHash, @Email, @TipoUsuario)";
                 await connection.ExecuteAsync(query, user);
             }
         }
