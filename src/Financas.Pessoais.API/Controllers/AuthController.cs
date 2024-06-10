@@ -2,6 +2,7 @@
 using Financas.Pessoais.Domain.Entidades;
 using Financas.Pessoais.Domain.Models;
 using Financas.Pessoais.Infrastructure.Interfaces;
+using Financas.Pessoais.Infrastructure.Seguranca;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Financas.Pessoais.API.Controllers
@@ -52,11 +53,18 @@ namespace Financas.Pessoais.API.Controllers
             {
                 _logger.LogInformation("Registrando novo usuário: {Username}", registerModel.Username);
 
-                // Simplified for example purposes, you'd hash the password in a real application
+                bool emailExists = await _authService.VerificarSeEmailExisteAsync(registerModel.Email);
+                if (emailExists)
+                {
+                    _logger.LogWarning("Tentativa de registrar novo usuário com email existente: {Email}", registerModel.Email);
+                    return Conflict("Este email já está cadastrado.");
+                }
+
+                string passwordHash = PasswordHasher.HashPassword(registerModel.Password);
                 var user = new User
                 {
                     Username = registerModel.Username,
-                    PasswordHash = registerModel.Password,
+                    PasswordHash = passwordHash,
                     Email = registerModel.Email
                 };
 

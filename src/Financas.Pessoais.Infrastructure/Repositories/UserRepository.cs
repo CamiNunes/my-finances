@@ -28,12 +28,13 @@ namespace Financas.Pessoais.Infrastructure.Repositories
             }
         }
 
-        public async Task<User> GetUserByUsernameAsync(string email)
+        public async Task<User?> ObterUsuarioPorEmailAsync(string email)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
                 const string query = "SELECT * FROM TB_USUARIOS WHERE Email = @Email";
-                return await connection.QuerySingleOrDefaultAsync<User>(query, new { Email = email });
+                var user = await connection.QuerySingleOrDefaultAsync<User>(query, new { Email = email });
+                return user;
             }
         }
     }

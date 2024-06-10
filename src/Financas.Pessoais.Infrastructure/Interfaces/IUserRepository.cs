@@ -9,7 +9,7 @@ namespace Financas.Pessoais.Infrastructure.Interfaces
 {
     public interface IUserRepository
     {
-        Task<User> GetUserByUsernameAsync(string username);
+        Task<User?> ObterUsuarioPorEmailAsync(string username);
         Task AddUserAsync(User user);
     }
 }

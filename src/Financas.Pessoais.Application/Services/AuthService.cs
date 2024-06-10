@@ -29,9 +29,15 @@ namespace Financas.Pessoais.Application.Services
             }
         }
 
+        public async Task<bool> VerificarSeEmailExisteAsync(string email)
+        {
+            var existingUser = await _userRepository.ObterUsuarioPorEmailAsync(email);
+            return existingUser != null;
+        }
+
         public async Task<(string token, string userName)> AuthenticateAsync(string username, string password)
         {
-            var user = await _userRepository.GetUserByUsernameAsync(username);
+            var user = await _userRepository.ObterUsuarioPorEmailAsync(username);
 
             if (user == null || !VerifyPassword(password, user.PasswordHash))
             {
