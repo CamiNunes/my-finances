@@ -12,35 +12,49 @@ namespace Financas.Pessoais.API.Controllers
     public class DespesasController : ControllerBase
     {
         private readonly IDespesasService _despesasService;
+        private readonly ILogger<DespesasController> _logger;
 
-        public DespesasController(IDespesasService despesasService)
+        public DespesasController(IDespesasService despesasService, ILogger<DespesasController> logger)
         {
             _despesasService = despesasService;
+            _logger = logger;
         }
 
         [HttpPost("despesa")]
         public async Task<IActionResult> IncluirDespesa(DespesasInputModel despesasInputModel)
         {
-            var contract = new DespesasInputModelContrato(despesasInputModel);
-            if (!contract.IsValid)
+            try
             {
-                return BadRequest(contract.Notifications);
+                _logger.LogInformation("Iniciando a inclusão de uma nova despesa.");
+
+                var contract = new DespesasInputModelContrato(despesasInputModel);
+                if (!contract.IsValid)
+                {
+                    _logger.LogWarning("Dados de entrada inválidos para a despesa: {Erros}", contract.Notifications);
+                    return BadRequest(contract.Notifications);
+                }
+
+                var despesa = new DespesasInputModel
+                {
+                    Valor = despesasInputModel.Valor,
+                    Descricao = despesasInputModel.Descricao,
+                    Categoria = despesasInputModel.Categoria,
+                    Pago = despesasInputModel.Pago,
+                    DataVencimento = despesasInputModel.DataVencimento,
+                    DataPagamento = despesasInputModel.DataPagamento,
+                    TipoDespesa = despesasInputModel.TipoDespesa
+                };
+
+                await _despesasService.IncluirDespesaAsync(despesa);
+
+                _logger.LogInformation("Despesa incluída com sucesso: {Despesa}", despesa);
+                return Ok(despesa);
             }
-
-            // Mapeie o modelo de entrada para a entidade de domínio, se necessário
-            var despesa = new DespesasInputModel
+            catch (Exception ex)
             {
-                Valor = despesasInputModel.Valor,
-                Descricao = despesasInputModel.Descricao,
-                Categoria = despesasInputModel.Categoria,
-                Pago = despesasInputModel.Pago,
-                DataVencimento = despesasInputModel.DataVencimento,
-                DataPagamento = despesasInputModel.DataPagamento,
-                TipoDespesa = despesasInputModel.TipoDespesa
-            };
-
-            await _despesasService.IncluirDespesaAsync(despesa);
-            return Ok(despesa);
+                _logger.LogError(ex, "Erro ao incluir nova despesa.");
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
         }
 
         [HttpGet("listar-despesas")]
@@ -52,13 +66,16 @@ namespace Financas.Pessoais.API.Controllers
 
                 if (result == null || !result.Any())
                 {
+                    _logger.LogWarning("Nenhuma despesa encontrada.");
                     return NotFound("Nenhuma despesa encontrada.");
                 }
 
+                _logger.LogInformation("Despesas obtidas com sucesso.");
                 return Ok(result);
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, $"Erro interno do servidor: {ex.Message}");
                 return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
             }
         }
@@ -70,6 +87,7 @@ namespace Financas.Pessoais.API.Controllers
             {
                 if (string.IsNullOrEmpty(descricao))
                 {
+                    _logger.LogWarning("A descrição da despesa não pode ser vazia.");
                     return BadRequest("A descrição não pode ser vazia.");
                 }
 
@@ -77,13 +95,16 @@ namespace Financas.Pessoais.API.Controllers
 
                 if (result == null || !result.Any())
                 {
+                    _logger.LogInformation($"Nenhuma despesa encontrada com a descrição '{descricao}'.");
                     return NotFound($"Nenhuma despesa encontrada com a descrição '{descricao}'.");
                 }
 
+                _logger.LogInformation($"Despesas encontradas com a descrição '{descricao}'.");
                 return Ok(result);
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, $"Erro interno do servidor ao obter despesas com a descrição '{descricao}': {ex.Message}");
                 return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
             }
         }
@@ -95,16 +116,17 @@ namespace Financas.Pessoais.API.Controllers
             {
                 if (id == Guid.Empty)
                 {
+                    _logger.LogWarning("Tentativa de exclusão com ID de despesa inválido.");
                     return BadRequest("O ID da despesa é inválido.");
                 }
 
                 await _despesasService.ExcluirDespesaAsync(id);
-
+                _logger.LogInformation($"Despesa com ID {id} excluída com sucesso.");
                 return NoContent(); // Retorna código 204 (No Content) se a exclusão for bem-sucedida
             }
             catch (Exception ex)
             {
-                // Log the exception (ex) here if necessary
+                _logger.LogError(ex, $"Erro ao excluir a despesa com ID {id}: {ex.Message}");
                 return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
             }
         }

@@ -24,14 +24,27 @@ namespace Financas.Pessoais.API.Controllers
         [HttpPost("categoria")]
         public async Task<IActionResult> IncluirCategoria(CategoriaInputModel categoria)
         {
-            var contract = new CategoriaInputModelContrato(categoria);
-            if (!contract.IsValid)
+            try
             {
-                return BadRequest(contract.Notifications);
-            }
+                _logger.LogInformation("Iniciando a inclusão de uma nova categoria.");
 
-            await _categoriasService.IncluirCategoriaAsync(categoria);
-            return Ok(categoria);
+                var contract = new CategoriaInputModelContrato(categoria);
+                if (!contract.IsValid)
+                {
+                    _logger.LogWarning("Dados de entrada inválidos para a categoria: {Erros}", contract.Notifications);
+                    return BadRequest(contract.Notifications);
+                }
+
+                await _categoriasService.IncluirCategoriaAsync(categoria);
+
+                _logger.LogInformation("Categoria incluída com sucesso: {Categoria}", categoria);
+                return Ok(categoria);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao incluir nova categoria.");
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
         }
 
         [HttpGet("listar-categorias")]
