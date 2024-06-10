@@ -71,7 +71,7 @@ namespace Financas.Pessoais.API.Controllers
                 await _userRepository.AddUserAsync(user);
 
                 _logger.LogInformation("Novo usuário registrado: {Username}", registerModel.Username);
-                return Ok();
+                return Ok("Usuário cadastrado com sucesso.");
             }
             catch (Exception ex)
             {
