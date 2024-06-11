@@ -65,7 +65,8 @@ namespace Financas.Pessoais.API.Controllers
                 {
                     Username = registerModel.Username,
                     PasswordHash = passwordHash,
-                    Email = registerModel.Email
+                    Email = registerModel.Email,
+                    TipoUsuario = registerModel.TipoUsuario
                 };
 
                 await _userRepository.AddUserAsync(user);

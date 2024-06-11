@@ -97,6 +97,8 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+builder.Services.AddHttpContextAccessor();
+
 // Add CORS policy
 builder.Services.AddCors(options =>
 {

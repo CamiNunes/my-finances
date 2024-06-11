@@ -17,10 +17,8 @@ namespace Financas.Pessoais.IoC
             // Application Layer
             services.AddScoped<IDespesasService, DespesasService>();
             services.AddScoped<IReceitasService, ReceitasService>();
-            services.AddScoped<ICategoriasService, CategoriasService>();
-            services.AddScoped<AuthService>(provider => new AuthService(
-                provider.GetRequiredService<IUserRepository>(),
-                configuration));
+            services.AddScoped<ICategoriasService, CategoriasService>();            
+            services.AddScoped<AuthService>();
 
             // Domain Layer
             services.AddScoped<IDespesasRepository>(provider => new DespesasRepository(connectionString));

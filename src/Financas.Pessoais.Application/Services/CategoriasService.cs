@@ -8,25 +8,37 @@ namespace Financas.Pessoais.Application.Services
     public class CategoriasService : ICategoriasService
     {
         private readonly ICategoriasRepository _categoriasRepository;
+        private readonly AuthService _authService;
 
-        public CategoriasService(ICategoriasRepository categoriasRepository)
+        public CategoriasService(ICategoriasRepository categoriasRepository, AuthService authService)
         {
             _categoriasRepository = categoriasRepository;
+            _authService = authService;
+        }
+
+        private async Task VerificarSeUsuarioEhAdministradorAsync()
+        {
+            var usuario = await _authService.ObterUsuarioAutenticadoAsync();
+            if (usuario == null || !usuario.IsAdmin)
+            {
+                throw new UnauthorizedAccessException("Usuário não tem permissão para realizar esta ação.");
+            }
         }
 
         public async Task IncluirCategoriaAsync(CategoriaInputModel categoria)
         {
-            var novaCategoria = new CategoriaInputModel
-            {
-                Descricao = categoria.Descricao
-            };
+            await VerificarSeUsuarioEhAdministradorAsync();
 
-            await _categoriasRepository.IncluirCategoriaAsync(novaCategoria);
+            var usuario = await _authService.ObterUsuarioAutenticadoAsync();
+            await _categoriasRepository.IncluirCategoriaAsync(categoria, usuario.Email);
         }
 
         public async Task<IEnumerable<CategoriaViewModel>> ObterCategoriasAsync()
         {
-            return await _categoriasRepository.ObterCategoriasAsync();
+            await VerificarSeUsuarioEhAdministradorAsync();
+
+            var usuario = await _authService.ObterUsuarioAutenticadoAsync();
+            return await _categoriasRepository.ObterCategoriasAsync(usuario.Email);
         }
 
         public Task<IEnumerable<CategoriaViewModel>> ObterCategoriasPorDescricaoAsync(string descricao)
@@ -36,7 +48,10 @@ namespace Financas.Pessoais.Application.Services
 
         public async Task ExcluirCategoriaAsync(Guid categoriaId)
         {
-            await _categoriasRepository.ExcluirCategoriaAsync(categoriaId);
+            await VerificarSeUsuarioEhAdministradorAsync();
+
+            var usuario = await _authService.ObterUsuarioAutenticadoAsync();
+            await _categoriasRepository.ExcluirCategoriaAsync(categoriaId, usuario.Email);
         }
     }
 }

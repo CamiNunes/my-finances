@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Financas.Pessoais.Domain.Entidades;
 using Financas.Pessoais.Domain.Models.InputModels;
 using Financas.Pessoais.Domain.Models.ViewModels;
 using Financas.Pessoais.Infrastructure.Interfaces;
@@ -16,21 +17,23 @@ namespace Financas.Pessoais.Infrastructure.Repositories
             this.connectionString = connectionString;
         }
 
-        public async Task IncluirCategoriaAsync(CategoriaInputModel categoria)
+        public async Task IncluirCategoriaAsync(CategoriaInputModel categoria, string emailUsuario)
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "INSERT INTO TB_CATEGORIAS (Descricao) VALUES (@Descricao)";
-                await connection.ExecuteAsync(sql, categoria);
+                var sql = "INSERT INTO TB_CATEGORIAS (Descricao, CriadoPor) VALUES (@Descricao, @CriadoPor)";
+                var parameters = new { Descricao = categoria.Descricao, CriadoPor = emailUsuario };
+                await connection.ExecuteAsync(sql, parameters);
             }
         }
 
-        public async Task<IEnumerable<CategoriaViewModel>> ObterCategoriasAsync()
+        public async Task<IEnumerable<CategoriaViewModel>> ObterCategoriasAsync(string emailUsuario)
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "SELECT * FROM TB_CATEGORIAS ORDER BY DESCRICAO";
-                return await connection.QueryAsync<CategoriaViewModel>(sql);
+                var sql = "SELECT * FROM TB_CATEGORIAS ORDER BY DESCRICAO WHERE CriadoPor = @CriadoPor";
+                var parameters = new { CriadoPor = emailUsuario };
+                return await connection.QueryAsync<CategoriaViewModel>(sql, parameters);
             }
         }
 
@@ -39,13 +42,13 @@ namespace Financas.Pessoais.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public async Task ExcluirCategoriaAsync(Guid categoriaId)
+        public async Task ExcluirCategoriaAsync(Guid categoriaId, string emailUsuario)
         {
-            const string query = "DELETE FROM TB_CATEGORIAS WHERE Id = @CategoriaId";
+            const string query = "DELETE FROM TB_CATEGORIAS WHERE Id = @CategoriaId AND CriadoPor = @CriadoPor";
 
             using (IDbConnection dbConnection = new SqlConnection(connectionString))
             {
-                var parameters = new { CategoriaId = categoriaId };
+                var parameters = new { CategoriaId = categoriaId, CriadoPor = emailUsuario };
                 await dbConnection.ExecuteAsync(query, parameters);
             }
         }
