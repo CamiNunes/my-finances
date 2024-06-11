@@ -5,9 +5,9 @@ namespace Financas.Pessoais.Infrastructure.Interfaces
 {
     public interface IDespesasRepository
     {
-        Task IncluirDespesaAsync(DespesasInputModel receita);
-        Task<IEnumerable<DespesasViewModel>> ObterDespesasAsync();
-        Task<IEnumerable<DespesasViewModel>> ObterDespesasPorDescricaoAsync(string descricao);
-        Task ExcluirDespesaAsync(Guid despesaId);
+        Task IncluirDespesaAsync(DespesasInputModel receita, string emailUsuario);
+        Task<IEnumerable<DespesasViewModel>> ObterDespesasAsync(string emailUsuario);
+        Task<IEnumerable<DespesasViewModel>> ObterDespesasPorDescricaoAsync(string descricao, string emailUsuario);
+        Task ExcluirDespesaAsync(Guid despesaId, string emailUsuario);
     }
 }

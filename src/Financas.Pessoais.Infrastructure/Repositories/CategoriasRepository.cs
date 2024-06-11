@@ -31,7 +31,7 @@ namespace Financas.Pessoais.Infrastructure.Repositories
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "SELECT * FROM TB_CATEGORIAS ORDER BY DESCRICAO WHERE CriadoPor = @CriadoPor";
+                var sql = "SELECT * FROM TB_CATEGORIAS WHERE CriadoPor = @CriadoPor ORDER BY DESCRICAO ";
                 var parameters = new { CriadoPor = emailUsuario };
                 return await connection.QueryAsync<CategoriaViewModel>(sql, parameters);
             }
