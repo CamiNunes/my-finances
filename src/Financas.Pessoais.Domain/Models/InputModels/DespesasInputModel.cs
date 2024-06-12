@@ -9,7 +9,7 @@ namespace Financas.Pessoais.Domain.Models.InputModels
         public string Categoria { get; set; } = string.Empty;
         public bool Pago { get; set; }
         public DateTime DataVencimento { get; set; }
-        public DateTime DataPagamento { get; set; }
+        public DateTime? DataPagamento { get; set; }
         public TipoDespesaEnum TipoDespesa { get; set; }
     }
 }

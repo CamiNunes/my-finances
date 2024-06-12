@@ -17,19 +17,19 @@ namespace Financas.Pessoais.Infrastructure.Repositories
             this.connectionString = connectionString;
         }
 
-        public async Task IncluirReceitaAsync(ReceitasInputModel receitas, string emailUsuario)
+        public async Task IncluirReceitaAsync(ReceitasInputModel receita, string emailUsuario)
         {
             using (var connection = new SqlConnection(connectionString))
             {
                 var sql = "INSERT INTO TB_RECEITAS (Valor, Descricao, Recebido, DataRecebimento, TipoReceita, Categoria, CriadoPor) VALUES (@Valor, @Descricao, @Recebido, @DataRecebimento, @TipoReceita, @Categoria, @CriadoPor)";
                 var parameters = new
                 {
-                    Valor = receitas.Valor,
-                    Descricao = receitas.Descricao,
-                    Recebido = receitas.Recebido,
-                    DataRecebimento = receitas.DataRecebimento,
-                    TipoReceita = receitas.TipoReceita,
-                    Categoria = receitas.Categoria,
+                    receita.Valor,
+                    receita.Descricao,
+                    receita.Recebido,
+                    DataRecebimento = receita.DataRecebimento ?? (object)DBNull.Value,
+                    receita.TipoReceita,
+                    receita.Categoria,
                     CriadoPor = emailUsuario
                 };
                 await connection.ExecuteAsync(sql, parameters);

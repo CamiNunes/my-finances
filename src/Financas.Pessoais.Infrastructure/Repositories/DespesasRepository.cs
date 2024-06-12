@@ -27,7 +27,7 @@ namespace Financas.Pessoais.Infrastructure.Repositories
                             Descricao = despesa.Descricao,
                             Pago = despesa.Pago,
                             DataVencimento = despesa.DataVencimento,
-                            DataPagamento = despesa.DataPagamento,
+                            DataPagamento = despesa.DataPagamento ?? (object)DBNull.Value,
                             TipoDespesa = despesa.TipoDespesa,
                             Categoria = despesa.Categoria,
                             CriadoPor = emailUsuario };

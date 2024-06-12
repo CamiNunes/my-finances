@@ -44,7 +44,7 @@ namespace Financas.Pessoais.API.Controllers
                 var receita = new ReceitasInputModel
                 {
                     Recebido = receitasInputModel.Recebido,
-                    DataRecebimento = receitasInputModel.DataRecebimento ?? DateTime.MinValue, // Use MinValue ou uma lógica padrão
+                    DataRecebimento = receitasInputModel.DataRecebimento,
                     TipoReceita = receitasInputModel.TipoReceita,
                     Valor = receitasInputModel.Valor,
                     Descricao = receitasInputModel.Descricao,

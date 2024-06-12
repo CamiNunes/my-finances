@@ -17,8 +17,7 @@ namespace Financas.Pessoais.Domain.FluntContratos
             if (receitasInputModel.Recebido)
             {
                 Requires()
-                    .IsNotNull(receitasInputModel.DataRecebimento, "DataRecebimento", "Data de recebimento deve ser fornecida quando a receita está recebida")
-                    .IsTrue(receitasInputModel.DataRecebimento.HasValue && receitasInputModel.DataRecebimento.Value > DateTime.MinValue, "DataRecebimento", "Data de recebimento inválida");
+                    .IsTrue(receitasInputModel.DataRecebimento != null && receitasInputModel.DataRecebimento.Value > DateTime.MinValue, "DataRecebimento", "Data de recebimento deve ser fornecida quando a despesa está recebida.");
             }
         }
     }

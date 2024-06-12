@@ -1,0 +1,692 @@
+2024-06-12 14:55:44.641 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 14:55:45.351 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 14:55:45.352 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 14:55:45.353 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 14:55:45.354 -03:00 [INF] Hosting environment: Development
+2024-06-12 14:55:45.354 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 14:55:47.949 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 14:55:48.235 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 295.194ms
+2024-06-12 14:55:48.249 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 14:55:48.254 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 5.848ms
+2024-06-12 14:55:48.278 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 14:55:48.338 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.943ms
+2024-06-12 14:55:48.458 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 14:55:48.616 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 157.6289ms
+2024-06-12 14:56:21.897 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 14:56:21.910 -03:00 [INF] CORS policy execution successful.
+2024-06-12 14:56:22.646 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 14:56:22.674 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 14:56:22.737 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 14:56:24.049 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 14:56:24.054 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 14:56:24.061 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 1383.7001ms
+2024-06-12 14:56:24.062 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 14:56:24.063 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 2173.5872ms
+2024-06-12 14:59:30.335 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Categorias/categoria - application/json 35
+2024-06-12 14:59:30.338 -03:00 [INF] CORS policy execution successful.
+2024-06-12 14:59:30.405 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.CategoriasController.IncluirCategoria (Financas.Pessoais.API)'
+2024-06-12 14:59:30.410 -03:00 [INF] Route matched with {action = "IncluirCategoria", controller = "Categorias"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirCategoria(Financas.Pessoais.Domain.Models.InputModels.CategoriaInputModel) on controller Financas.Pessoais.API.Controllers.CategoriasController (Financas.Pessoais.API).
+2024-06-12 14:59:30.543 -03:00 [INF] Iniciando a inclusão de uma nova categoria.
+2024-06-12 14:59:30.562 -03:00 [INF] Categoria incluída com sucesso: Financas.Pessoais.Domain.Models.InputModels.CategoriaInputModel
+2024-06-12 14:59:30.562 -03:00 [INF] Executing OkObjectResult, writing value of type 'Financas.Pessoais.Domain.Models.InputModels.CategoriaInputModel'.
+2024-06-12 14:59:30.563 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.CategoriasController.IncluirCategoria (Financas.Pessoais.API) in 152.5795ms
+2024-06-12 14:59:30.563 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.CategoriasController.IncluirCategoria (Financas.Pessoais.API)'
+2024-06-12 14:59:30.563 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Categorias/categoria - 200 null application/json; charset=utf-8 228.089ms
+2024-06-12 15:00:36.572 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Despesas/despesa - application/json 188
+2024-06-12 15:00:36.577 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:00:36.582 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 15:00:36.585 -03:00 [INF] Route matched with {action = "IncluirDespesa", controller = "Despesas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirDespesa(Financas.Pessoais.Domain.Models.InputModels.DespesasInputModel) on controller Financas.Pessoais.API.Controllers.DespesasController (Financas.Pessoais.API).
+2024-06-12 15:00:36.607 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-06-12 15:00:36.620 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API) in 34.7569ms
+2024-06-12 15:00:36.620 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 15:00:36.620 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Despesas/despesa - 400 null application/problem+json; charset=utf-8 50.8371ms
+2024-06-12 15:02:02.651 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 15:02:02.900 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 15:02:02.901 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 15:02:02.902 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 15:02:02.902 -03:00 [INF] Hosting environment: Development
+2024-06-12 15:02:02.902 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 15:02:03.621 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 15:02:03.967 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 346.8037ms
+2024-06-12 15:02:04.009 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 15:02:04.009 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 15:02:04.013 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 4.4097ms
+2024-06-12 15:02:04.046 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.8674ms
+2024-06-12 15:02:04.171 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 15:02:04.324 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 152.6638ms
+2024-06-12 15:02:22.225 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 15:02:22.233 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:02:22.292 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:02:22.338 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 15:02:22.368 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 15:02:22.670 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 15:02:22.677 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 15:02:22.684 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 342.728ms
+2024-06-12 15:02:22.684 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:02:22.685 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 460.565ms
+2024-06-12 15:03:26.622 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Despesas/despesa - application/json 188
+2024-06-12 15:03:26.627 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:03:26.667 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 15:03:26.670 -03:00 [INF] Route matched with {action = "IncluirDespesa", controller = "Despesas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirDespesa(Financas.Pessoais.Domain.Models.InputModels.DespesasInputModel) on controller Financas.Pessoais.API.Controllers.DespesasController (Financas.Pessoais.API).
+2024-06-12 15:03:30.045 -03:00 [INF] Iniciando a inclusão de uma nova despesa.
+2024-06-12 15:03:32.895 -03:00 [WRN] Dados de entrada inválidos para a despesa: ["Flunt.Notifications.Notification"]
+2024-06-12 15:03:35.091 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[Flunt.Notifications.Notification, Flunt, Version=2.0.5.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-12 15:03:35.092 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API) in 8422.2426ms
+2024-06-12 15:03:35.093 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 15:03:35.093 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Despesas/despesa - 400 null application/json; charset=utf-8 8471.5466ms
+2024-06-12 15:07:27.037 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 15:07:27.291 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 15:07:27.291 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 15:07:27.292 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 15:07:27.292 -03:00 [INF] Hosting environment: Development
+2024-06-12 15:07:27.292 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 15:07:27.664 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 15:07:27.837 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 173.9026ms
+2024-06-12 15:07:27.846 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 15:07:27.849 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 4.3563ms
+2024-06-12 15:07:27.872 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 15:07:27.911 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.0619ms
+2024-06-12 15:07:28.042 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 15:07:28.149 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 107.3314ms
+2024-06-12 15:07:55.420 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 15:07:55.430 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:07:55.499 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:07:55.524 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 15:07:55.564 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 15:07:55.906 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 15:07:55.913 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 15:07:55.920 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 392.8889ms
+2024-06-12 15:07:55.920 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:07:55.921 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 507.0999ms
+2024-06-12 15:08:35.033 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Despesas/despesa - application/json 188
+2024-06-12 15:08:35.034 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:08:35.075 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 15:08:35.082 -03:00 [INF] Route matched with {action = "IncluirDespesa", controller = "Despesas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirDespesa(Financas.Pessoais.Domain.Models.InputModels.DespesasInputModel) on controller Financas.Pessoais.API.Controllers.DespesasController (Financas.Pessoais.API).
+2024-06-12 15:08:38.466 -03:00 [INF] Iniciando a inclusão de uma nova despesa.
+2024-06-12 15:08:50.922 -03:00 [INF] Despesa incluída com sucesso: Financas.Pessoais.Domain.Models.InputModels.DespesasInputModel
+2024-06-12 15:08:52.459 -03:00 [INF] Executing OkObjectResult, writing value of type 'Financas.Pessoais.Domain.Models.InputModels.DespesasInputModel'.
+2024-06-12 15:08:54.563 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API) in 19480.7356ms
+2024-06-12 15:08:54.563 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 15:08:54.564 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Despesas/despesa - 200 null application/json; charset=utf-8 19531.0356ms
+2024-06-12 15:10:15.846 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Receitas/receita - application/json 138
+2024-06-12 15:10:15.852 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:10:15.860 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:10:15.863 -03:00 [INF] Route matched with {action = "IncluirReceita", controller = "Receitas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirReceita(Financas.Pessoais.Domain.Models.InputModels.ReceitasInputModel) on controller Financas.Pessoais.API.Controllers.ReceitasController (Financas.Pessoais.API).
+2024-06-12 15:10:15.991 -03:00 [ERR] Erro ao incluir receita: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at System.Data.SqlTypes.SqlDateTime.FromTimeSpan(TimeSpan value)
+   at System.Data.SqlTypes.SqlDateTime.FromDateTime(DateTime value)
+   at System.Data.SqlTypes.SqlDateTime..ctor(DateTime value)
+   at Microsoft.Data.SqlClient.MetaType.FromDateTime(DateTime dateTime, Byte cb)
+   at Microsoft.Data.SqlClient.TdsParser.WriteUnterminatedValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at Microsoft.Data.SqlClient.TdsParser.WriteValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at Microsoft.Data.SqlClient.TdsParser.TDSExecuteRPCAddParameter(TdsParserStateObject stateObj, SqlParameter param, MetaType mt, Byte options, SqlCommand command, Boolean isAnonymous)
+   at Microsoft.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, IList`1 rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQueryInternal(CommandBehavior behavior, AsyncCallback callback, Object stateObject, Int32 timeout, Boolean inRetry, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQueryAsync(AsyncCallback callback, Object stateObject)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_0(AsyncCallback callback, Object stateObject)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl(Func`3 beginMethod, Func`2 endFunction, Action`1 endAction, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory`1.FromAsync(Func`3 beginMethod, Func`2 endMethod, Object state)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at Financas.Pessoais.Infrastructure.Repositories.ReceitasRepository.IncluirReceitaAsync(ReceitasInputModel receitas, String emailUsuario) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Infrastructure\Repositories\ReceitasRepository.cs:line 35
+   at Financas.Pessoais.Application.Services.ReceitasService.IncluirReceitaAsync(ReceitasInputModel receita) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Application\Services\ReceitasService.cs:line 36
+   at Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita(ReceitasInputModel receitasInputModel) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API\Controllers\ReceitasController.cs:line 54
+2024-06-12 15:10:16.237 -03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-12 15:10:16.237 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API) in 373.9783ms
+2024-06-12 15:10:16.237 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:10:16.237 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Receitas/receita - 500 null text/plain; charset=utf-8 393.6098ms
+2024-06-12 15:12:28.743 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Receitas/receita - application/json 138
+2024-06-12 15:12:28.745 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:12:28.747 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:12:28.747 -03:00 [INF] Route matched with {action = "IncluirReceita", controller = "Receitas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirReceita(Financas.Pessoais.Domain.Models.InputModels.ReceitasInputModel) on controller Financas.Pessoais.API.Controllers.ReceitasController (Financas.Pessoais.API).
+2024-06-12 15:12:28.808 -03:00 [ERR] Erro ao incluir receita: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at System.Data.SqlTypes.SqlDateTime.FromTimeSpan(TimeSpan value)
+   at System.Data.SqlTypes.SqlDateTime.FromDateTime(DateTime value)
+   at System.Data.SqlTypes.SqlDateTime..ctor(DateTime value)
+   at Microsoft.Data.SqlClient.MetaType.FromDateTime(DateTime dateTime, Byte cb)
+   at Microsoft.Data.SqlClient.TdsParser.WriteUnterminatedValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at Microsoft.Data.SqlClient.TdsParser.WriteValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at Microsoft.Data.SqlClient.TdsParser.TDSExecuteRPCAddParameter(TdsParserStateObject stateObj, SqlParameter param, MetaType mt, Byte options, SqlCommand command, Boolean isAnonymous)
+   at Microsoft.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, IList`1 rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQueryInternal(CommandBehavior behavior, AsyncCallback callback, Object stateObject, Int32 timeout, Boolean inRetry, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQueryAsync(AsyncCallback callback, Object stateObject)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_0(AsyncCallback callback, Object stateObject)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl(Func`3 beginMethod, Func`2 endFunction, Action`1 endAction, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory`1.FromAsync(Func`3 beginMethod, Func`2 endMethod, Object state)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at Financas.Pessoais.Infrastructure.Repositories.ReceitasRepository.IncluirReceitaAsync(ReceitasInputModel receitas, String emailUsuario) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Infrastructure\Repositories\ReceitasRepository.cs:line 35
+   at Financas.Pessoais.Application.Services.ReceitasService.IncluirReceitaAsync(ReceitasInputModel receita) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Application\Services\ReceitasService.cs:line 36
+   at Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita(ReceitasInputModel receitasInputModel) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API\Controllers\ReceitasController.cs:line 54
+2024-06-12 15:12:28.809 -03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-12 15:12:28.809 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API) in 61.4304ms
+2024-06-12 15:12:28.809 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:12:28.809 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Receitas/receita - 500 null text/plain; charset=utf-8 69.7038ms
+2024-06-12 15:13:30.009 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 15:13:30.270 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 15:13:30.270 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 15:13:30.271 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 15:13:30.272 -03:00 [INF] Hosting environment: Development
+2024-06-12 15:13:30.272 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 15:13:31.011 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 15:13:31.245 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 237.9957ms
+2024-06-12 15:13:31.261 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 15:13:31.271 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 9.9666ms
+2024-06-12 15:13:31.286 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 15:13:31.340 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.9946ms
+2024-06-12 15:13:31.491 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 15:13:31.621 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 129.9993ms
+2024-06-12 15:13:51.506 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 15:13:51.515 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:13:52.331 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:13:52.350 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 15:13:52.374 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 15:13:53.230 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 15:13:53.235 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 15:13:53.241 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 888.3121ms
+2024-06-12 15:13:53.241 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:13:53.242 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 1736.5055ms
+2024-06-12 15:14:35.192 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Receitas/receita - application/json 138
+2024-06-12 15:14:35.194 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:14:35.248 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:14:35.252 -03:00 [INF] Route matched with {action = "IncluirReceita", controller = "Receitas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirReceita(Financas.Pessoais.Domain.Models.InputModels.ReceitasInputModel) on controller Financas.Pessoais.API.Controllers.ReceitasController (Financas.Pessoais.API).
+2024-06-12 15:14:35.431 -03:00 [ERR] Erro ao incluir receita: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at System.Data.SqlTypes.SqlDateTime.FromTimeSpan(TimeSpan value)
+   at System.Data.SqlTypes.SqlDateTime.FromDateTime(DateTime value)
+   at System.Data.SqlTypes.SqlDateTime..ctor(DateTime value)
+   at Microsoft.Data.SqlClient.MetaType.FromDateTime(DateTime dateTime, Byte cb)
+   at Microsoft.Data.SqlClient.TdsParser.WriteUnterminatedValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at Microsoft.Data.SqlClient.TdsParser.WriteValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at Microsoft.Data.SqlClient.TdsParser.TDSExecuteRPCAddParameter(TdsParserStateObject stateObj, SqlParameter param, MetaType mt, Byte options, SqlCommand command, Boolean isAnonymous)
+   at Microsoft.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, IList`1 rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQueryInternal(CommandBehavior behavior, AsyncCallback callback, Object stateObject, Int32 timeout, Boolean inRetry, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQueryAsync(AsyncCallback callback, Object stateObject)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_0(AsyncCallback callback, Object stateObject)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl(Func`3 beginMethod, Func`2 endFunction, Action`1 endAction, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory`1.FromAsync(Func`3 beginMethod, Func`2 endMethod, Object state)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at Financas.Pessoais.Infrastructure.Repositories.ReceitasRepository.IncluirReceitaAsync(ReceitasInputModel receitas, String emailUsuario) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Infrastructure\Repositories\ReceitasRepository.cs:line 35
+   at Financas.Pessoais.Application.Services.ReceitasService.IncluirReceitaAsync(ReceitasInputModel receita) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Application\Services\ReceitasService.cs:line 36
+   at Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita(ReceitasInputModel receitasInputModel) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API\Controllers\ReceitasController.cs:line 54
+2024-06-12 15:14:35.494 -03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-12 15:14:35.495 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API) in 242.0038ms
+2024-06-12 15:14:35.495 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:14:35.495 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Receitas/receita - 500 null text/plain; charset=utf-8 302.872ms
+2024-06-12 15:39:34.293 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 15:39:34.526 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 15:39:34.526 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 15:39:34.527 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 15:39:34.528 -03:00 [INF] Hosting environment: Development
+2024-06-12 15:39:34.528 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 15:39:34.864 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 15:39:35.041 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 176.8319ms
+2024-06-12 15:39:35.090 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 15:39:35.090 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 15:39:35.099 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 9.9164ms
+2024-06-12 15:39:35.128 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.6623ms
+2024-06-12 15:39:35.253 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 15:39:35.392 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 139.9591ms
+2024-06-12 15:40:16.739 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 15:40:16.750 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:40:16.796 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:40:16.813 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 15:40:16.838 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 15:40:17.132 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 15:40:17.140 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 15:40:17.152 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 331.4288ms
+2024-06-12 15:40:17.152 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:40:17.153 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 413.8412ms
+2024-06-12 15:41:05.165 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Receitas/receita - application/json 138
+2024-06-12 15:41:05.166 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:41:05.207 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:41:05.210 -03:00 [INF] Route matched with {action = "IncluirReceita", controller = "Receitas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirReceita(Financas.Pessoais.Domain.Models.InputModels.ReceitasInputModel) on controller Financas.Pessoais.API.Controllers.ReceitasController (Financas.Pessoais.API).
+2024-06-12 15:41:05.371 -03:00 [ERR] Erro ao incluir receita: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at System.Data.SqlTypes.SqlDateTime.FromTimeSpan(TimeSpan value)
+   at System.Data.SqlTypes.SqlDateTime.FromDateTime(DateTime value)
+   at System.Data.SqlTypes.SqlDateTime..ctor(DateTime value)
+   at Microsoft.Data.SqlClient.MetaType.FromDateTime(DateTime dateTime, Byte cb)
+   at Microsoft.Data.SqlClient.TdsParser.WriteUnterminatedValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at Microsoft.Data.SqlClient.TdsParser.WriteValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at Microsoft.Data.SqlClient.TdsParser.TDSExecuteRPCAddParameter(TdsParserStateObject stateObj, SqlParameter param, MetaType mt, Byte options, SqlCommand command, Boolean isAnonymous)
+   at Microsoft.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, IList`1 rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQueryInternal(CommandBehavior behavior, AsyncCallback callback, Object stateObject, Int32 timeout, Boolean inRetry, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQueryAsync(AsyncCallback callback, Object stateObject)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_0(AsyncCallback callback, Object stateObject)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl(Func`3 beginMethod, Func`2 endFunction, Action`1 endAction, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory`1.FromAsync(Func`3 beginMethod, Func`2 endMethod, Object state)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at Financas.Pessoais.Infrastructure.Repositories.ReceitasRepository.IncluirReceitaAsync(ReceitasInputModel receitas, String emailUsuario) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Infrastructure\Repositories\ReceitasRepository.cs:line 35
+   at Financas.Pessoais.Application.Services.ReceitasService.IncluirReceitaAsync(ReceitasInputModel receita) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Application\Services\ReceitasService.cs:line 36
+   at Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita(ReceitasInputModel receitasInputModel) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API\Controllers\ReceitasController.cs:line 54
+2024-06-12 15:41:05.428 -03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-12 15:41:05.428 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API) in 217.8298ms
+2024-06-12 15:41:05.428 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:41:05.428 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Receitas/receita - 500 null text/plain; charset=utf-8 264.2809ms
+2024-06-12 15:49:32.824 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 15:49:33.056 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 15:49:33.056 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 15:49:33.057 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 15:49:33.057 -03:00 [INF] Hosting environment: Development
+2024-06-12 15:49:33.058 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 15:49:33.391 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 15:49:33.640 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 252.5821ms
+2024-06-12 15:49:33.653 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 15:49:33.660 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 6.8904ms
+2024-06-12 15:49:33.681 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 15:49:33.743 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.0034ms
+2024-06-12 15:49:33.889 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 15:49:34.017 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 128.5489ms
+2024-06-12 15:49:48.871 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 15:49:48.876 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:49:49.604 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:49:49.623 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 15:49:49.649 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 15:49:50.480 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 15:49:50.487 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 15:49:50.493 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 867.8873ms
+2024-06-12 15:49:50.494 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:49:50.495 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 1625.0197ms
+2024-06-12 15:50:29.756 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Receitas/receita - application/json 138
+2024-06-12 15:50:29.760 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:50:29.804 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:50:29.807 -03:00 [INF] Route matched with {action = "IncluirReceita", controller = "Receitas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirReceita(Financas.Pessoais.Domain.Models.InputModels.ReceitasInputModel) on controller Financas.Pessoais.API.Controllers.ReceitasController (Financas.Pessoais.API).
+2024-06-12 15:50:29.978 -03:00 [ERR] Erro ao incluir receita: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at System.Data.SqlTypes.SqlDateTime.FromTimeSpan(TimeSpan value)
+   at System.Data.SqlTypes.SqlDateTime.FromDateTime(DateTime value)
+   at System.Data.SqlTypes.SqlDateTime..ctor(DateTime value)
+   at Microsoft.Data.SqlClient.MetaType.FromDateTime(DateTime dateTime, Byte cb)
+   at Microsoft.Data.SqlClient.TdsParser.WriteUnterminatedValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at Microsoft.Data.SqlClient.TdsParser.WriteValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at Microsoft.Data.SqlClient.TdsParser.TDSExecuteRPCAddParameter(TdsParserStateObject stateObj, SqlParameter param, MetaType mt, Byte options, SqlCommand command, Boolean isAnonymous)
+   at Microsoft.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, IList`1 rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQueryInternal(CommandBehavior behavior, AsyncCallback callback, Object stateObject, Int32 timeout, Boolean inRetry, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQueryAsync(AsyncCallback callback, Object stateObject)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_0(AsyncCallback callback, Object stateObject)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl(Func`3 beginMethod, Func`2 endFunction, Action`1 endAction, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory`1.FromAsync(Func`3 beginMethod, Func`2 endMethod, Object state)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at Financas.Pessoais.Infrastructure.Repositories.ReceitasRepository.IncluirReceitaAsync(ReceitasInputModel receita, String emailUsuario) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Infrastructure\Repositories\ReceitasRepository.cs:line 35
+   at Financas.Pessoais.Application.Services.ReceitasService.IncluirReceitaAsync(ReceitasInputModel receita) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Application\Services\ReceitasService.cs:line 36
+   at Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita(ReceitasInputModel receitasInputModel) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API\Controllers\ReceitasController.cs:line 54
+2024-06-12 15:50:30.028 -03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-12 15:50:30.029 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API) in 221.311ms
+2024-06-12 15:50:30.029 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:50:30.029 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Receitas/receita - 500 null text/plain; charset=utf-8 275.5534ms
+2024-06-12 15:51:07.766 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 15:51:07.998 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 15:51:07.998 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 15:51:07.999 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 15:51:07.999 -03:00 [INF] Hosting environment: Development
+2024-06-12 15:51:07.999 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 15:51:08.685 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 15:51:08.961 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 274.4048ms
+2024-06-12 15:51:08.970 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 15:51:08.977 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 6.8271ms
+2024-06-12 15:51:08.998 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 15:51:09.034 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.331ms
+2024-06-12 15:51:09.184 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 15:51:09.331 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 146.4208ms
+2024-06-12 15:51:28.533 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 15:51:28.538 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:51:28.598 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:51:28.616 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 15:51:28.641 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 15:51:28.965 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 15:51:28.971 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 15:51:28.977 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 357.8546ms
+2024-06-12 15:51:28.977 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:51:28.978 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 445.4188ms
+2024-06-12 15:51:52.422 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Receitas/receita - application/json 138
+2024-06-12 15:51:52.424 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:51:52.470 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:51:52.473 -03:00 [INF] Route matched with {action = "IncluirReceita", controller = "Receitas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirReceita(Financas.Pessoais.Domain.Models.InputModels.ReceitasInputModel) on controller Financas.Pessoais.API.Controllers.ReceitasController (Financas.Pessoais.API).
+2024-06-12 15:51:52.597 -03:00 [ERR] Erro ao incluir receita: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at System.Data.SqlTypes.SqlDateTime.FromTimeSpan(TimeSpan value)
+   at System.Data.SqlTypes.SqlDateTime.FromDateTime(DateTime value)
+   at System.Data.SqlTypes.SqlDateTime..ctor(DateTime value)
+   at Microsoft.Data.SqlClient.MetaType.FromDateTime(DateTime dateTime, Byte cb)
+   at Microsoft.Data.SqlClient.TdsParser.WriteUnterminatedValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at Microsoft.Data.SqlClient.TdsParser.WriteValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at Microsoft.Data.SqlClient.TdsParser.TDSExecuteRPCAddParameter(TdsParserStateObject stateObj, SqlParameter param, MetaType mt, Byte options, SqlCommand command, Boolean isAnonymous)
+   at Microsoft.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, IList`1 rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQueryInternal(CommandBehavior behavior, AsyncCallback callback, Object stateObject, Int32 timeout, Boolean inRetry, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQueryAsync(AsyncCallback callback, Object stateObject)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_0(AsyncCallback callback, Object stateObject)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl(Func`3 beginMethod, Func`2 endFunction, Action`1 endAction, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory`1.FromAsync(Func`3 beginMethod, Func`2 endMethod, Object state)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at Financas.Pessoais.Infrastructure.Repositories.ReceitasRepository.IncluirReceitaAsync(ReceitasInputModel receita, String emailUsuario) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Infrastructure\Repositories\ReceitasRepository.cs:line 35
+   at Financas.Pessoais.Application.Services.ReceitasService.IncluirReceitaAsync(ReceitasInputModel receita) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Application\Services\ReceitasService.cs:line 36
+   at Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita(ReceitasInputModel receitasInputModel) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API\Controllers\ReceitasController.cs:line 54
+2024-06-12 15:51:52.632 -03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-12 15:51:52.632 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API) in 159.2165ms
+2024-06-12 15:51:52.633 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:51:52.633 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Receitas/receita - 500 null text/plain; charset=utf-8 210.7802ms
+2024-06-12 15:53:09.141 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 15:53:09.349 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 15:53:09.349 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 15:53:09.351 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 15:53:09.351 -03:00 [INF] Hosting environment: Development
+2024-06-12 15:53:09.351 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 15:53:10.124 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 15:53:10.398 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 279.9616ms
+2024-06-12 15:53:10.434 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 15:53:10.434 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 15:53:10.438 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 4.7082ms
+2024-06-12 15:53:10.477 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.7881ms
+2024-06-12 15:53:10.615 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 15:53:10.736 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 121.0442ms
+2024-06-12 15:53:30.189 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 15:53:30.197 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:53:30.907 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:53:30.924 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 15:53:30.947 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 15:53:31.699 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 15:53:31.704 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 15:53:31.710 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 783.3634ms
+2024-06-12 15:53:31.711 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:53:31.711 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 1522.3442ms
+2024-06-12 15:54:01.166 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Receitas/receita - application/json 138
+2024-06-12 15:54:01.176 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:54:01.227 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:54:01.232 -03:00 [INF] Route matched with {action = "IncluirReceita", controller = "Receitas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirReceita(Financas.Pessoais.Domain.Models.InputModels.ReceitasInputModel) on controller Financas.Pessoais.API.Controllers.ReceitasController (Financas.Pessoais.API).
+2024-06-12 15:54:01.326 -03:00 [WRN] Contrato de validação falhou para inclusão de receita: [{"Key":"DataRecebimento","Message":"Data de pagamento inválida","$type":"Notification"}]
+2024-06-12 15:54:01.331 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[Flunt.Notifications.Notification, Flunt, Version=2.0.5.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-12 15:54:01.333 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API) in 100.6859ms
+2024-06-12 15:54:01.333 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:54:01.333 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Receitas/receita - 400 null application/json; charset=utf-8 168.0937ms
+2024-06-12 15:55:32.739 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 15:55:33.010 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 15:55:33.010 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 15:55:33.011 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 15:55:33.011 -03:00 [INF] Hosting environment: Development
+2024-06-12 15:55:33.012 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 15:55:33.624 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 15:55:33.892 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 271.5461ms
+2024-06-12 15:55:33.929 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 15:55:33.929 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 15:55:33.936 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 6.7637ms
+2024-06-12 15:55:33.977 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.284ms
+2024-06-12 15:55:34.128 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 15:55:34.273 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 145.6493ms
+2024-06-12 15:55:47.847 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 15:55:47.853 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:55:47.905 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:55:47.922 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 15:55:47.945 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 15:55:48.256 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 15:55:48.261 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 15:55:48.267 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 342.2843ms
+2024-06-12 15:55:48.268 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:55:48.269 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 422.0715ms
+2024-06-12 15:56:23.180 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Despesas/despesa - application/json 181
+2024-06-12 15:56:23.186 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:56:23.227 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 15:56:23.231 -03:00 [INF] Route matched with {action = "IncluirDespesa", controller = "Despesas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirDespesa(Financas.Pessoais.Domain.Models.InputModels.DespesasInputModel) on controller Financas.Pessoais.API.Controllers.DespesasController (Financas.Pessoais.API).
+2024-06-12 15:56:29.121 -03:00 [INF] Iniciando a inclusão de uma nova despesa.
+2024-06-12 15:56:30.398 -03:00 [WRN] Dados de entrada inválidos para a despesa: ["Flunt.Notifications.Notification"]
+2024-06-12 15:56:31.196 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[Flunt.Notifications.Notification, Flunt, Version=2.0.5.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-12 15:56:31.197 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API) in 7965.9806ms
+2024-06-12 15:56:31.197 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 15:56:31.197 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Despesas/despesa - 400 null application/json; charset=utf-8 8018.5094ms
+2024-06-12 15:58:56.749 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 15:58:56.954 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 15:58:56.954 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 15:58:56.956 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 15:58:56.956 -03:00 [INF] Hosting environment: Development
+2024-06-12 15:58:56.956 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 15:58:57.642 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 15:58:57.870 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 234.1716ms
+2024-06-12 15:58:57.919 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 15:58:57.919 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 15:58:57.927 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 3.9784ms
+2024-06-12 15:58:57.966 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.0497ms
+2024-06-12 15:58:58.103 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 15:58:58.252 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 149.18ms
+2024-06-12 15:59:11.584 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 15:59:11.589 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:59:12.301 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:59:12.319 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 15:59:12.348 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 15:59:13.156 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 15:59:13.161 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 15:59:13.169 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 846.4161ms
+2024-06-12 15:59:13.169 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 15:59:13.170 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 1586.1035ms
+2024-06-12 15:59:39.510 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Receitas/receita - application/json 138
+2024-06-12 15:59:39.551 -03:00 [INF] CORS policy execution successful.
+2024-06-12 15:59:39.593 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:59:39.597 -03:00 [INF] Route matched with {action = "IncluirReceita", controller = "Receitas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirReceita(Financas.Pessoais.Domain.Models.InputModels.ReceitasInputModel) on controller Financas.Pessoais.API.Controllers.ReceitasController (Financas.Pessoais.API).
+2024-06-12 15:59:39.612 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-06-12 15:59:39.621 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API) in 24.5933ms
+2024-06-12 15:59:39.622 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 15:59:39.622 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Receitas/receita - 400 null application/problem+json; charset=utf-8 113.396ms
+2024-06-12 16:18:28.025 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 16:18:28.260 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 16:18:28.261 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 16:18:28.263 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 16:18:28.264 -03:00 [INF] Hosting environment: Development
+2024-06-12 16:18:28.264 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 16:18:29.073 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 16:18:29.346 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 277.9068ms
+2024-06-12 16:18:29.355 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 16:18:29.359 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 4.4363ms
+2024-06-12 16:18:29.385 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 16:18:29.433 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.1065ms
+2024-06-12 16:18:29.570 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 16:18:29.777 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 207.1551ms
+2024-06-12 16:18:49.527 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 16:18:49.532 -03:00 [INF] CORS policy execution successful.
+2024-06-12 16:18:49.595 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 16:18:49.616 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 16:18:49.643 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 16:18:49.974 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 16:18:49.980 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 16:18:49.986 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 367.1975ms
+2024-06-12 16:18:49.986 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 16:18:49.987 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 460.3037ms
+2024-06-12 16:19:28.981 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Despesas/despesa - application/json 181
+2024-06-12 16:19:28.982 -03:00 [INF] CORS policy execution successful.
+2024-06-12 16:19:29.023 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 16:19:29.028 -03:00 [INF] Route matched with {action = "IncluirDespesa", controller = "Despesas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirDespesa(Financas.Pessoais.Domain.Models.InputModels.DespesasInputModel) on controller Financas.Pessoais.API.Controllers.DespesasController (Financas.Pessoais.API).
+2024-06-12 16:19:29.047 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-06-12 16:19:29.055 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API) in 27.1755ms
+2024-06-12 16:19:29.056 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 16:19:29.056 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Despesas/despesa - 400 null application/problem+json; charset=utf-8 74.9527ms
+2024-06-12 16:20:37.694 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 16:20:37.949 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 16:20:37.949 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 16:20:37.950 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 16:20:37.950 -03:00 [INF] Hosting environment: Development
+2024-06-12 16:20:37.950 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 16:20:38.608 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 16:20:38.901 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 298.5914ms
+2024-06-12 16:20:38.965 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 16:20:38.965 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 16:20:38.982 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 16.8269ms
+2024-06-12 16:20:39.047 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.8402ms
+2024-06-12 16:20:39.212 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 16:20:39.377 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 165.0378ms
+2024-06-12 16:20:54.298 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 16:20:54.305 -03:00 [INF] CORS policy execution successful.
+2024-06-12 16:20:54.372 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 16:20:54.398 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 16:20:54.432 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 16:20:54.745 -03:00 [WRN] Login falhou para o email: cvn.camila@gmail.com
+2024-06-12 16:20:54.751 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-06-12 16:20:54.766 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 364.0941ms
+2024-06-12 16:20:54.766 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 16:20:54.767 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 401 null application/problem+json; charset=utf-8 469.1295ms
+2024-06-12 16:21:01.722 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 16:21:01.724 -03:00 [INF] CORS policy execution successful.
+2024-06-12 16:21:01.725 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 16:21:01.725 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 16:21:01.726 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 16:21:01.763 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 16:21:01.763 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 16:21:01.765 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 39.425ms
+2024-06-12 16:21:01.765 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 16:21:01.765 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 43.3354ms
+2024-06-12 16:21:30.110 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Despesas/despesa - application/json 188
+2024-06-12 16:21:30.115 -03:00 [INF] CORS policy execution successful.
+2024-06-12 16:21:30.156 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 16:21:30.161 -03:00 [INF] Route matched with {action = "IncluirDespesa", controller = "Despesas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirDespesa(Financas.Pessoais.Domain.Models.InputModels.DespesasInputModel) on controller Financas.Pessoais.API.Controllers.DespesasController (Financas.Pessoais.API).
+2024-06-12 16:21:30.232 -03:00 [INF] Iniciando a inclusão de uma nova despesa.
+2024-06-12 16:21:30.234 -03:00 [WRN] Dados de entrada inválidos para a despesa: ["Flunt.Notifications.Notification"]
+2024-06-12 16:21:30.235 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[Flunt.Notifications.Notification, Flunt, Version=2.0.5.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-12 16:21:30.236 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API) in 75.1409ms
+2024-06-12 16:21:30.236 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 16:21:30.236 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Despesas/despesa - 400 null application/json; charset=utf-8 126.2862ms
+2024-06-12 16:26:59.393 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 16:26:59.609 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 16:26:59.609 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 16:26:59.610 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 16:26:59.610 -03:00 [INF] Hosting environment: Development
+2024-06-12 16:26:59.610 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 16:27:00.393 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 16:27:00.707 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 318.2973ms
+2024-06-12 16:27:00.715 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 16:27:00.719 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 4.6235ms
+2024-06-12 16:27:00.747 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 16:27:00.852 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 104.859ms
+2024-06-12 16:27:01.016 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 16:27:01.210 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 193.9504ms
+2024-06-12 16:27:16.789 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 16:27:16.797 -03:00 [INF] CORS policy execution successful.
+2024-06-12 16:27:17.548 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 16:27:17.565 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 16:27:17.590 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 16:27:18.399 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 16:27:18.405 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 16:27:18.413 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 843.4273ms
+2024-06-12 16:27:18.413 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 16:27:18.414 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 1625.178ms
+2024-06-12 16:27:44.921 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Despesas/despesa - application/json 188
+2024-06-12 16:27:44.926 -03:00 [INF] CORS policy execution successful.
+2024-06-12 16:27:44.967 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 16:27:44.970 -03:00 [INF] Route matched with {action = "IncluirDespesa", controller = "Despesas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirDespesa(Financas.Pessoais.Domain.Models.InputModels.DespesasInputModel) on controller Financas.Pessoais.API.Controllers.DespesasController (Financas.Pessoais.API).
+2024-06-12 16:27:45.042 -03:00 [INF] Iniciando a inclusão de uma nova despesa.
+2024-06-12 16:27:45.067 -03:00 [INF] Despesa incluída com sucesso: Financas.Pessoais.Domain.Models.InputModels.DespesasInputModel
+2024-06-12 16:27:45.067 -03:00 [INF] Executing OkObjectResult, writing value of type 'Financas.Pessoais.Domain.Models.InputModels.DespesasInputModel'.
+2024-06-12 16:27:45.072 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API) in 101.6934ms
+2024-06-12 16:27:45.072 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DespesasController.IncluirDespesa (Financas.Pessoais.API)'
+2024-06-12 16:27:45.072 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Despesas/despesa - 200 null application/json; charset=utf-8 152.4652ms
+2024-06-12 16:40:41.729 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 16:40:41.948 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 16:40:41.948 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 16:40:41.950 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 16:40:41.950 -03:00 [INF] Hosting environment: Development
+2024-06-12 16:40:41.950 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 16:40:42.256 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 16:40:42.454 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 201.1618ms
+2024-06-12 16:40:42.462 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 16:40:42.473 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 12.1726ms
+2024-06-12 16:40:42.494 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 16:40:42.538 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.361ms
+2024-06-12 16:40:42.686 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 16:40:42.813 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 127.5742ms
+2024-06-12 16:40:57.574 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 16:40:57.579 -03:00 [INF] CORS policy execution successful.
+2024-06-12 16:40:58.281 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 16:40:58.299 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 16:40:58.322 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 16:40:59.133 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 16:40:59.138 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 16:40:59.147 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 844.7095ms
+2024-06-12 16:40:59.147 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 16:40:59.148 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 1575.7778ms
+2024-06-12 16:41:21.794 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Receitas/receita - application/json 138
+2024-06-12 16:41:21.800 -03:00 [INF] CORS policy execution successful.
+2024-06-12 16:41:21.840 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 16:41:21.843 -03:00 [INF] Route matched with {action = "IncluirReceita", controller = "Receitas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirReceita(Financas.Pessoais.Domain.Models.InputModels.ReceitasInputModel) on controller Financas.Pessoais.API.Controllers.ReceitasController (Financas.Pessoais.API).
+2024-06-12 16:41:22.022 -03:00 [ERR] Erro ao incluir receita: Must declare the scalar variable "@CriadoPor".
+Microsoft.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@CriadoPor".
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at Financas.Pessoais.Infrastructure.Repositories.ReceitasRepository.IncluirReceitaAsync(ReceitasInputModel receita, String emailUsuario) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Infrastructure\Repositories\ReceitasRepository.cs:line 35
+   at Financas.Pessoais.Application.Services.ReceitasService.IncluirReceitaAsync(ReceitasInputModel receita) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.Application\Services\ReceitasService.cs:line 36
+   at Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita(ReceitasInputModel receitasInputModel) in Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API\Controllers\ReceitasController.cs:line 54
+ClientConnectionId:b9e26dea-4150-4be3-9454-ac5146498c30
+Error Number:137,State:2,Class:15
+2024-06-12 16:41:22.073 -03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-12 16:41:22.073 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API) in 229.845ms
+2024-06-12 16:41:22.073 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 16:41:22.074 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Receitas/receita - 500 null text/plain; charset=utf-8 280.4187ms
+2024-06-12 16:42:08.587 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 16:42:08.843 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-12 16:42:08.843 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-12 16:42:08.844 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 16:42:08.844 -03:00 [INF] Hosting environment: Development
+2024-06-12 16:42:08.844 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-12 16:42:09.557 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-12 16:42:09.762 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 212.5267ms
+2024-06-12 16:42:09.806 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-12 16:42:09.806 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 16:42:09.811 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 4.66ms
+2024-06-12 16:42:09.850 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.0883ms
+2024-06-12 16:42:10.007 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-12 16:42:10.173 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 169.421ms
+2024-06-12 16:42:40.035 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-06-12 16:42:40.042 -03:00 [INF] CORS policy execution successful.
+2024-06-12 16:42:40.093 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 16:42:40.110 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-06-12 16:42:40.135 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-06-12 16:42:40.423 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-06-12 16:42:40.429 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-12 16:42:40.435 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 322.2962ms
+2024-06-12 16:42:40.436 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-06-12 16:42:40.437 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 401.265ms
+2024-06-12 16:43:06.200 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Receitas/receita - application/json 138
+2024-06-12 16:43:06.201 -03:00 [INF] CORS policy execution successful.
+2024-06-12 16:43:06.239 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 16:43:06.242 -03:00 [INF] Route matched with {action = "IncluirReceita", controller = "Receitas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncluirReceita(Financas.Pessoais.Domain.Models.InputModels.ReceitasInputModel) on controller Financas.Pessoais.API.Controllers.ReceitasController (Financas.Pessoais.API).
+2024-06-12 16:43:06.285 -03:00 [INF] Receita incluída com sucesso: {"Recebido":false,"DataRecebimento":null,"TipoReceita":"Pessoal","Valor":1500,"Descricao":"Freela","Categoria":"Freelas","$type":"ReceitasInputModel"}
+2024-06-12 16:43:06.286 -03:00 [INF] Executing OkObjectResult, writing value of type 'Financas.Pessoais.Domain.Models.InputModels.ReceitasInputModel'.
+2024-06-12 16:43:06.289 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API) in 47.1787ms
+2024-06-12 16:43:06.289 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.IncluirReceita (Financas.Pessoais.API)'
+2024-06-12 16:43:06.289 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Receitas/receita - 200 null application/json; charset=utf-8 89.7462ms
