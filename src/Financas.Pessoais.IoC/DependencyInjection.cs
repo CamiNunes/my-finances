@@ -4,6 +4,7 @@ using Financas.Pessoais.Infrastructure.Interfaces;
 using Financas.Pessoais.Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Financas.Pessoais.Application;
 
 namespace Financas.Pessoais.IoC
 {
@@ -19,6 +20,7 @@ namespace Financas.Pessoais.IoC
             services.AddScoped<IReceitasService, ReceitasService>();
             services.AddScoped<ICategoriasService, CategoriasService>();            
             services.AddScoped<AuthService>();
+            services.AddScoped<UserContext>();
 
             // Domain Layer
             services.AddScoped<IDespesasRepository>(provider => new DespesasRepository(connectionString));

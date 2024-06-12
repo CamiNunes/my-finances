@@ -12,26 +12,28 @@ namespace Financas.Pessoais.Application.Services
     {
         private readonly IDespesasRepository _despesasRepository;
         private readonly AuthService _authService;
+        private readonly UserContext _userContext;
 
-        public DespesasService(IDespesasRepository despesasRepository, AuthService authService)
+        public DespesasService(IDespesasRepository despesasRepository, AuthService authService, UserContext userContext)
         {
             _despesasRepository = despesasRepository;
             _authService = authService;
+            _userContext = userContext;
         }
 
-        private async Task VerificarSeUsuarioEhAdministradorAsync()
-        {
-            var usuario = await _authService.ObterUsuarioAutenticadoAsync();
-            if (usuario == null || !usuario.IsAdmin)
-            {
-                throw new UnauthorizedAccessException("Usuário não tem permissão para realizar esta ação.");
-            }
-        }
+        //private async Task VerificarSeUsuarioEhAdministradorAsync()
+        //{
+        //    var usuario = await _authService.ObterUsuarioAutenticadoAsync();
+        //    if (usuario == null || !usuario.IsAdmin)
+        //    {
+        //        throw new UnauthorizedAccessException("Usuário não tem permissão para realizar esta ação.");
+        //    }
+        //}
 
         public async Task IncluirDespesaAsync(DespesasInputModel despesa)
         {
-            await VerificarSeUsuarioEhAdministradorAsync();
-            var usuario = await _authService.ObterUsuarioAutenticadoAsync();
+            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            //var usuario = await _authService.ObterUsuarioAutenticadoAsync();
            
             var novaDespesa = new DespesasInputModel
             {
@@ -49,24 +51,21 @@ namespace Financas.Pessoais.Application.Services
 
         public async Task<IEnumerable<DespesasViewModel>> ObterDespesasAsync()
         {
-            await VerificarSeUsuarioEhAdministradorAsync();
-            var usuario = await _authService.ObterUsuarioAutenticadoAsync();
+            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
 
             return await _despesasRepository.ObterDespesasAsync(usuario.Email);
         }
 
         public async Task<IEnumerable<DespesasViewModel>> ObterDespesasPorDescricaoAsync(string descricao)
         {
-            await VerificarSeUsuarioEhAdministradorAsync();
-            var usuario = await _authService.ObterUsuarioAutenticadoAsync();
+            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
 
             return await _despesasRepository.ObterDespesasPorDescricaoAsync(descricao, usuario.Email);
         }
 
         public async Task ExcluirDespesaAsync(Guid despesaId)
         {
-            await VerificarSeUsuarioEhAdministradorAsync();
-            var usuario = await _authService.ObterUsuarioAutenticadoAsync();
+            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
 
             await _despesasRepository.ExcluirDespesaAsync(despesaId, usuario.Email);
         }

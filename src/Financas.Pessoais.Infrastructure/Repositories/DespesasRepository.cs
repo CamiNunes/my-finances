@@ -40,7 +40,7 @@ namespace Financas.Pessoais.Infrastructure.Repositories
             using (var connection = new SqlConnection(connectionString))
             {
                 var sql = "SELECT * FROM TB_DESPESAS WHERE CriadoPor = @CriadoPor";
-                return await connection.QueryAsync<DespesasViewModel>(sql);
+                return await connection.QueryAsync<DespesasViewModel>(sql, new {  CriadoPor = emailUsuario });
             }
         }
 

@@ -11,15 +11,17 @@ namespace Financas.Pessoais.Application.Services
     public class ReceitasService : IReceitasService
     {
         private readonly IReceitasRepository _receitasRepository;
+        private readonly UserContext _userContext;
 
-        public ReceitasService(IReceitasRepository receitasRepository)
+        public ReceitasService(IReceitasRepository receitasRepository, UserContext userContext)
         {
             _receitasRepository = receitasRepository;
+            _userContext = userContext;
         }
 
         public async Task IncluirReceitaAsync(ReceitasInputModel receita)
         {
-            //bool recebido = receita.Recebido=true;
+            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
 
             var novaReceita = new ReceitasInputModel
             {
@@ -31,22 +33,25 @@ namespace Financas.Pessoais.Application.Services
                 Categoria = receita.Categoria
             };
 
-            await _receitasRepository.IncluirReceitaAsync(novaReceita);
+            await _receitasRepository.IncluirReceitaAsync(novaReceita, usuario.Email);
         }
 
         public async Task<IEnumerable<ReceitasViewModel>> ObterReceitasAsync()
         {
-            return await _receitasRepository.ObterReceitasAsync();
+            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            return await _receitasRepository.ObterReceitasAsync(usuario.Email);
         }
 
         public async Task<IEnumerable<ReceitasViewModel>> ObterReceitasPorDescricaoAsync(string descricao)
         {
-            return await _receitasRepository.ObterReceitasPorDescricaoAsync(descricao);
+            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            return await _receitasRepository.ObterReceitasPorDescricaoAsync(descricao, usuario.Email);
         }
 
         public async Task ExcluirReceitaAsync(Guid receitaId)
         {
-            await _receitasRepository.ExcluirReceitaAsync(receitaId);
+            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            await _receitasRepository.ExcluirReceitaAsync(receitaId, usuario.Email);
         }
     }
 }

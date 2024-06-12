@@ -6,9 +6,9 @@ namespace Financas.Pessoais.Infrastructure.Interfaces
 {
     public interface IReceitasRepository
     {
-        Task IncluirReceitaAsync(ReceitasInputModel receita);
-        Task<IEnumerable<ReceitasViewModel>> ObterReceitasAsync();
-        Task<IEnumerable<ReceitasViewModel>> ObterReceitasPorDescricaoAsync(string descricao);
-        Task ExcluirReceitaAsync(Guid receitaId);
+        Task IncluirReceitaAsync(ReceitasInputModel receita, string emailUsuario);
+        Task<IEnumerable<ReceitasViewModel>> ObterReceitasAsync(string emailUsuario);
+        Task<IEnumerable<ReceitasViewModel>> ObterReceitasPorDescricaoAsync(string descricao, string emailUsuario);
+        Task ExcluirReceitaAsync(Guid receitaId, string emailUsuario);
     }
 }
