@@ -1,10 +1,8 @@
 ﻿using Financas.Pessoais.Application.Interfaces;
-using Financas.Pessoais.Domain.Entidades;
 using Financas.Pessoais.Domain.Enums;
 using Financas.Pessoais.Domain.Models.InputModels;
 using Financas.Pessoais.Domain.Models.ViewModels;
 using Financas.Pessoais.Infrastructure.Interfaces;
-using Financas.Pessoais.Infrastructure.Repositories;
 
 namespace Financas.Pessoais.Application.Services
 {
@@ -20,15 +18,6 @@ namespace Financas.Pessoais.Application.Services
             _authService = authService;
             _userContext = userContext;
         }
-
-        //private async Task VerificarSeUsuarioEhAdministradorAsync()
-        //{
-        //    var usuario = await _authService.ObterUsuarioAutenticadoAsync();
-        //    if (usuario == null || !usuario.IsAdmin)
-        //    {
-        //        throw new UnauthorizedAccessException("Usuário não tem permissão para realizar esta ação.");
-        //    }
-        //}
 
         public async Task IncluirDespesaAsync(DespesasInputModel despesa)
         {

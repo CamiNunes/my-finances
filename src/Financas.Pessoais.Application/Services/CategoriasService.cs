@@ -52,43 +52,5 @@ namespace Financas.Pessoais.Application.Services
             }
             await _categoriasRepository.ExcluirCategoriaAsync(categoriaId, usuario.Email);
         }
-
-        //private async Task VerificarSeUsuarioEhAdministradorAsync()
-        //{
-        //    var usuario = await _authService.ObterUsuarioAutenticadoAsync();
-        //    if (usuario == null || !usuario.IsAdmin)
-        //    {
-        //        throw new UnauthorizedAccessException("Usuário não tem permissão para realizar esta ação.");
-        //    }
-        //}
-
-        //public async Task IncluirCategoriaAsync(CategoriaInputModel categoria)
-        //{
-        //    await VerificarSeUsuarioEhAdministradorAsync();
-
-        //    var usuario = await _authService.ObterUsuarioAutenticadoAsync();
-        //    await _categoriasRepository.IncluirCategoriaAsync(categoria, usuario.Email);
-        //}
-
-        //public async Task<IEnumerable<CategoriaViewModel>> ObterCategoriasAsync()
-        //{
-        //    await VerificarSeUsuarioEhAdministradorAsync();
-
-        //    var usuario = await _authService.ObterUsuarioAutenticadoAsync();
-        //    return await _categoriasRepository.ObterCategoriasAsync(usuario.Email);
-        //}
-
-        //public Task<IEnumerable<CategoriaViewModel>> ObterCategoriasPorDescricaoAsync(string descricao)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public async Task ExcluirCategoriaAsync(Guid categoriaId)
-        //{
-        //    await VerificarSeUsuarioEhAdministradorAsync();
-
-        //    var usuario = await _authService.ObterUsuarioAutenticadoAsync();
-        //    await _categoriasRepository.ExcluirCategoriaAsync(categoriaId, usuario.Email);
-        //}
     }
 }
