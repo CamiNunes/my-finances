@@ -6,9 +6,10 @@ namespace Financas.Pessoais.Application.Interfaces
 {
     public interface IReceitasService
     {
-        Task IncluirReceitaAsync(ReceitasInputModel receita);
+        Task IncluirReceitaAsync(Receitas receita);
         Task<IEnumerable<ReceitasViewModel>> ObterReceitasAsync();
         Task<IEnumerable<ReceitasViewModel>> ObterReceitasPorDescricaoAsync(string descricao);
         Task ExcluirReceitaAsync(Guid receitaId);
     }
 }
+    

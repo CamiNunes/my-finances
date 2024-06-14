@@ -1,4 +1,6 @@
-﻿using Financas.Pessoais.Application.Interfaces;
+﻿using AutoMapper;
+using Financas.Pessoais.Application.Interfaces;
+using Financas.Pessoais.Domain.Entidades;
 using Financas.Pessoais.Domain.FluntContracts;
 using Financas.Pessoais.Domain.Models.InputModels;
 using Microsoft.AspNetCore.Authorization;
@@ -14,31 +16,35 @@ namespace Financas.Pessoais.API.Controllers
     {
         private readonly ICategoriasService _categoriasService;
         private readonly ILogger<CategoriasController> _logger;
+        private readonly IMapper _mapper;
 
-        public CategoriasController(ICategoriasService categoriasService, ILogger<CategoriasController> logger)
+        public CategoriasController(ICategoriasService categoriasService, ILogger<CategoriasController> logger, IMapper mapper)
         {
             _categoriasService = categoriasService;
             _logger = logger;
+            _mapper = mapper;
         }
 
         [HttpPost("categoria")]
-        public async Task<IActionResult> IncluirCategoria(CategoriaInputModel categoria)
+        public async Task<IActionResult> IncluirCategoria(CategoriaInputModel categoriaInputModel)
         {
             try
             {
                 _logger.LogInformation("Iniciando a inclusão de uma nova categoria.");
 
-                var contract = new CategoriaInputModelContrato(categoria);
+                var contract = new CategoriaInputModelContrato(categoriaInputModel);
                 if (!contract.IsValid)
                 {
                     _logger.LogWarning("Dados de entrada inválidos para a categoria: {Erros}", contract.Notifications);
                     return BadRequest(contract.Notifications);
                 }
 
-                await _categoriasService.IncluirCategoriaAsync(categoria);
+                var novaCategoria = _mapper.Map<Categoria>(categoriaInputModel);
+                
+                await _categoriasService.IncluirCategoriaAsync(novaCategoria);
 
-                _logger.LogInformation("Categoria incluída com sucesso: {Categoria}", categoria);
-                return Ok(categoria);
+                _logger.LogInformation("Categoria incluída com sucesso: {Categoria}", novaCategoria);
+                return Ok(novaCategoria);
             }
             catch (Exception ex)
             {

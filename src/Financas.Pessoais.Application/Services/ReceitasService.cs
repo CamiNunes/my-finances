@@ -1,4 +1,5 @@
 ﻿using Financas.Pessoais.Application.Interfaces;
+using Financas.Pessoais.Domain.Entidades;
 using Financas.Pessoais.Domain.Enums;
 using Financas.Pessoais.Domain.Models.InputModels;
 using Financas.Pessoais.Domain.Models.ViewModels;
@@ -17,7 +18,7 @@ namespace Financas.Pessoais.Application.Services
             _userContext = userContext;
         }
 
-        public async Task IncluirReceitaAsync(ReceitasInputModel receita)
+        public async Task IncluirReceitaAsync(Receitas receita)
         {
             var usuario = await _userContext.GetAuthenticatedUserAsync();
             if (usuario == null)

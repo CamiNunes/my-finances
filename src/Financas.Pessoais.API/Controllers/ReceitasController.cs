@@ -1,4 +1,5 @@
-﻿using Financas.Pessoais.Application.Interfaces;
+﻿using AutoMapper;
+using Financas.Pessoais.Application.Interfaces;
 using Financas.Pessoais.Application.Services;
 using Financas.Pessoais.Domain.Entidades;
 using Financas.Pessoais.Domain.FluntContratos;
@@ -15,11 +16,13 @@ namespace Financas.Pessoais.API.Controllers
     {
         private readonly IReceitasService _receitasService;
         private readonly ILogger<ReceitasController> _logger;
+        private readonly IMapper _mapper;
 
-        public ReceitasController(IReceitasService receitasService, ILogger<ReceitasController> logger)
+        public ReceitasController(IReceitasService receitasService, ILogger<ReceitasController> logger, IMapper mapper)
         {
             _receitasService = receitasService;
             _logger = logger;
+            _mapper = mapper;
         }
 
         [HttpPost("receita")]
@@ -40,20 +43,12 @@ namespace Financas.Pessoais.API.Controllers
                     return BadRequest(contract.Notifications);
                 }
 
-                // Mapeie o modelo de entrada para a entidade de domínio, se necessário
-                var receita = new ReceitasInputModel
-                {
-                    Recebido = receitasInputModel.Recebido,
-                    DataRecebimento = receitasInputModel.DataRecebimento,
-                    TipoReceita = receitasInputModel.TipoReceita,
-                    Valor = receitasInputModel.Valor,
-                    Descricao = receitasInputModel.Descricao,
-                    Categoria = receitasInputModel.Categoria
-                };
+                var novaReceita = _mapper.Map<Receitas>(receitasInputModel);
 
-                await _receitasService.IncluirReceitaAsync(receita);
-                _logger.LogInformation("Receita incluída com sucesso: {@Receita}", receita);
-                return Ok(receita);
+                await _receitasService.IncluirReceitaAsync(novaReceita);
+                
+                _logger.LogInformation("Receita incluída com sucesso: {@Receita}", novaReceita);
+                return Ok(novaReceita);
             }
             catch (Exception ex)
             {

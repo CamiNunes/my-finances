@@ -17,6 +17,9 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
+// Registra as configurações do AutoMapper
+AutoMapperConfig.RegisterMappings(builder.Services);
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

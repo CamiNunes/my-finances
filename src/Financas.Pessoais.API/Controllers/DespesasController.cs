@@ -1,4 +1,6 @@
-﻿using Financas.Pessoais.Application.Interfaces;
+﻿using AutoMapper;
+using Financas.Pessoais.Application.Interfaces;
+using Financas.Pessoais.Domain.Entidades;
 using Financas.Pessoais.Domain.FluntContratos;
 using Financas.Pessoais.Domain.Models.InputModels;
 using Microsoft.AspNetCore.Authorization;
@@ -13,11 +15,15 @@ namespace Financas.Pessoais.API.Controllers
     {
         private readonly IDespesasService _despesasService;
         private readonly ILogger<DespesasController> _logger;
+        private readonly IMapper _mapper;
 
-        public DespesasController(IDespesasService despesasService, ILogger<DespesasController> logger)
+        public DespesasController(IDespesasService despesasService, 
+                                  ILogger<DespesasController> logger, 
+                                  IMapper mapper)
         {
             _despesasService = despesasService;
             _logger = logger;
+            _mapper = mapper;
         }
 
         [HttpPost("despesa")]
@@ -34,21 +40,12 @@ namespace Financas.Pessoais.API.Controllers
                     return BadRequest(contract.Notifications);
                 }
 
-                var despesa = new DespesasInputModel
-                {
-                    Valor = despesasInputModel.Valor,
-                    Descricao = despesasInputModel.Descricao,
-                    Categoria = despesasInputModel.Categoria,
-                    Pago = despesasInputModel.Pago,
-                    DataVencimento = despesasInputModel.DataVencimento,
-                    DataPagamento = despesasInputModel.DataPagamento,
-                    TipoDespesa = despesasInputModel.TipoDespesa
-                };
+                var novaDespesa = _mapper.Map<Despesas>(despesasInputModel);
+                
+                await _despesasService.IncluirDespesaAsync(novaDespesa);
 
-                await _despesasService.IncluirDespesaAsync(despesa);
-
-                _logger.LogInformation("Despesa incluída com sucesso: {Despesa}", despesa);
-                return Ok(despesa);
+                _logger.LogInformation("Despesa incluída com sucesso: {Despesa}", novaDespesa);
+                return Ok(novaDespesa);
             }
             catch (Exception ex)
             {

@@ -7,6 +7,6 @@ namespace Financas.Pessoais.Domain.Entidades
         public bool Pago { get; set; }
         public DateTime DataVencimento { get; set; }
         public DateTime DataPagamento { get; set; }
-        public TipoDespesaEnum Tipo { get; set; }
+        public TipoDespesaEnum TipoDespesa { get; set; }
     }
 }
