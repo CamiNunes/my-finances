@@ -20,13 +20,21 @@ namespace Financas.Pessoais.Application.Services
 
         public async Task IncluirCategoriaAsync(CategoriaInputModel categoria)
         {
-            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
             await _categoriasRepository.IncluirCategoriaAsync(categoria, usuario.Email);
         }
 
         public async Task<IEnumerable<CategoriaViewModel>> ObterCategoriasAsync()
         {
-            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
             return await _categoriasRepository.ObterCategoriasAsync(usuario.Email);
         }
 
@@ -37,7 +45,11 @@ namespace Financas.Pessoais.Application.Services
 
         public async Task ExcluirCategoriaAsync(Guid categoriaId)
         {
-            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
             await _categoriasRepository.ExcluirCategoriaAsync(categoriaId, usuario.Email);
         }
 

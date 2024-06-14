@@ -21,7 +21,11 @@ namespace Financas.Pessoais.Application.Services
 
         public async Task IncluirReceitaAsync(ReceitasInputModel receita)
         {
-            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
 
             var novaReceita = new ReceitasInputModel
             {
@@ -38,19 +42,34 @@ namespace Financas.Pessoais.Application.Services
 
         public async Task<IEnumerable<ReceitasViewModel>> ObterReceitasAsync()
         {
-            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
+
             return await _receitasRepository.ObterReceitasAsync(usuario.Email);
         }
 
         public async Task<IEnumerable<ReceitasViewModel>> ObterReceitasPorDescricaoAsync(string descricao)
         {
-            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
+
             return await _receitasRepository.ObterReceitasPorDescricaoAsync(descricao, usuario.Email);
         }
 
         public async Task ExcluirReceitaAsync(Guid receitaId)
         {
-            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
+
             await _receitasRepository.ExcluirReceitaAsync(receitaId, usuario.Email);
         }
     }

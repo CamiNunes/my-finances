@@ -30,14 +30,13 @@ namespace Financas.Pessoais.Application
             return _cachedUser;
         }
 
-        public async Task<UsuarioViewModel> GetAuthenticatedAdminUserAsync()
+        public async Task EnsureAdminPrivilegesAsync()
         {
             var user = await GetAuthenticatedUserAsync();
             if (user == null || !user.IsAdmin)
             {
                 throw new UnauthorizedAccessException("Usuário não tem permissão para realizar esta ação.");
             }
-            return user;
         }
     }
 }

@@ -32,9 +32,12 @@ namespace Financas.Pessoais.Application.Services
 
         public async Task IncluirDespesaAsync(DespesasInputModel despesa)
         {
-            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
-            //var usuario = await _authService.ObterUsuarioAutenticadoAsync();
-           
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
+
             var novaDespesa = new DespesasInputModel
             {
                 Descricao = despesa.Descricao,
@@ -51,21 +54,33 @@ namespace Financas.Pessoais.Application.Services
 
         public async Task<IEnumerable<DespesasViewModel>> ObterDespesasAsync()
         {
-            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
 
             return await _despesasRepository.ObterDespesasAsync(usuario.Email);
         }
 
         public async Task<IEnumerable<DespesasViewModel>> ObterDespesasPorDescricaoAsync(string descricao)
         {
-            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
 
             return await _despesasRepository.ObterDespesasPorDescricaoAsync(descricao, usuario.Email);
         }
 
         public async Task ExcluirDespesaAsync(Guid despesaId)
         {
-            var usuario = await _userContext.GetAuthenticatedAdminUserAsync();
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
 
             await _despesasRepository.ExcluirDespesaAsync(despesaId, usuario.Email);
         }
