@@ -10,7 +10,8 @@ namespace Financas.Pessoais.Domain.Models.ViewModels
         public string Categoria { get; set; } = string.Empty;
         public bool Pago { get; set; }
         public DateTime DataVencimento { get; set; }
-        public DateTime DataPagamento { get; set; }
-        public TipoDespesaEnum Tipo { get; set; }
+        public DateTime? DataPagamento { get; set; }
+        public TipoDespesaEnum TipoDespesa { get; set; }
+        public string StatusDespesa { get; set; } = string.Empty;
     }
 }

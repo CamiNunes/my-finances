@@ -1,12 +1,7 @@
 ﻿using AutoMapper;
 using Financas.Pessoais.Domain.Entidades;
 using Financas.Pessoais.Domain.Models.InputModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Financas.Pessoais.Domain.Models.ViewModels;
 
 namespace Financas.Pessoais.Domain.Mappings
 {
@@ -15,8 +10,14 @@ namespace Financas.Pessoais.Domain.Mappings
         public MappingProfile()
         {
             CreateMap<CategoriaInputModel, Categoria>();
-            CreateMap<DespesasInputModel, Despesas>();
+
+            CreateMap<DespesasInputModel, Despesas>()
+                .ForMember(dest => dest.DataPagamento, opt => opt.MapFrom(src => src.DataPagamento));
+
             CreateMap<ReceitasInputModel, Receitas>();
+
+            CreateMap<DespesasViewModel, Despesas>();
         }
     }
 }
+    

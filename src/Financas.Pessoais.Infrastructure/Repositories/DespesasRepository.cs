@@ -5,6 +5,7 @@ using Financas.Pessoais.Domain.Models.ViewModels;
 using Financas.Pessoais.Infrastructure.Interfaces;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using System.Data.SqlTypes;
 
 namespace Financas.Pessoais.Infrastructure.Repositories
 {
@@ -27,7 +28,7 @@ namespace Financas.Pessoais.Infrastructure.Repositories
                             Descricao = despesa.Descricao,
                             Pago = despesa.Pago,
                             DataVencimento = despesa.DataVencimento,
-                            DataPagamento = despesa.DataPagamento ?? (object)DBNull.Value,
+                            DataPagamento = despesa.DataPagamento.HasValue && despesa.DataPagamento.Value >= (DateTime)SqlDateTime.MinValue ? despesa.DataPagamento.Value : (object)DBNull.Value,
                             TipoDespesa = despesa.TipoDespesa,
                             Categoria = despesa.Categoria,
                             CriadoPor = emailUsuario };
@@ -35,12 +36,12 @@ namespace Financas.Pessoais.Infrastructure.Repositories
             }
         }
 
-        public async Task<IEnumerable<DespesasViewModel>> ObterDespesasAsync(string emailUsuario)
+        public async Task<IEnumerable<Despesas>> ObterDespesasAsync(string emailUsuario)
         {
             using (var connection = new SqlConnection(connectionString))
             {
                 var sql = "SELECT * FROM TB_DESPESAS WHERE CriadoPor = @CriadoPor";
-                return await connection.QueryAsync<DespesasViewModel>(sql, new {  CriadoPor = emailUsuario });
+                return await connection.QueryAsync<Despesas>(sql, new {  CriadoPor = emailUsuario });
             }
         }
 

@@ -37,6 +37,7 @@ namespace Financas.Pessoais.Application.Services
                 DataVencimento = despesa.DataVencimento,
                 DataPagamento = despesa.DataPagamento,
                 Categoria = despesa.Categoria
+                //StatusDespesa = despesa.Pago && despesa.DataVencimento > DateTime.UtcNow ? "Vencido" : "Pago"
             };
 
             await _despesasRepository.IncluirDespesaAsync(novaDespesa, usuario.Email);
@@ -50,7 +51,24 @@ namespace Financas.Pessoais.Application.Services
                 throw new UnauthorizedAccessException("Usuário não autenticado.");
             }
 
-            return await _despesasRepository.ObterDespesasAsync(usuario.Email);
+            var despesas = await _despesasRepository.ObterDespesasAsync(usuario.Email);
+
+            var despesasViewModel = despesas.Select(despesa => new DespesasViewModel
+            {
+                Id = despesa.Id,
+                Valor = despesa.Valor,
+                Descricao = despesa.Descricao,
+                Pago = despesa.Pago,
+                DataVencimento = despesa.DataVencimento,
+                DataPagamento = despesa.DataPagamento,
+                TipoDespesa = despesa.TipoDespesa,
+                Categoria = despesa.Categoria,
+                StatusDespesa = despesa.Pago ? "PAGO"
+                                : despesa.DataVencimento <= DateTime.UtcNow ? "VENCIDO"
+                                : "ABERTO"
+            }).ToList();
+
+            return despesasViewModel;
         }
 
         public async Task<IEnumerable<DespesasViewModel>> ObterDespesasPorDescricaoAsync(string descricao)
