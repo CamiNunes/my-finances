@@ -37,7 +37,6 @@ namespace Financas.Pessoais.Application.Services
                 DataVencimento = despesa.DataVencimento,
                 DataPagamento = despesa.DataPagamento,
                 Categoria = despesa.Categoria
-                //StatusDespesa = despesa.Pago && despesa.DataVencimento > DateTime.UtcNow ? "Vencido" : "Pago"
             };
 
             await _despesasRepository.IncluirDespesaAsync(novaDespesa, usuario.Email);

@@ -5,6 +5,7 @@ using Financas.Pessoais.Domain.Models.ViewModels;
 using Financas.Pessoais.Infrastructure.Interfaces;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using System.Data.SqlTypes;
 
 namespace Financas.Pessoais.Infrastructure.Repositories
 {
@@ -27,7 +28,7 @@ namespace Financas.Pessoais.Infrastructure.Repositories
                     receita.Valor,
                     receita.Descricao,
                     receita.Recebido,
-                    DataRecebimento = receita.DataRecebimento ?? (object)DBNull.Value,
+                    DataRecebimento = receita.DataRecebimento.HasValue && receita.DataRecebimento.Value >= (DateTime)SqlDateTime.MinValue ? receita.DataRecebimento.Value : (object)DBNull.Value,
                     receita.TipoReceita,
                     receita.Categoria,
                     CriadoPor = emailUsuario
