@@ -52,3 +52,26 @@
 2024-06-18 11:52:26.355 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.ReceitasController.ObterReceitas (Financas.Pessoais.API) in 169.4299ms
 2024-06-18 11:52:26.356 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.ObterReceitas (Financas.Pessoais.API)'
 2024-06-18 11:52:26.356 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7192/api/Receitas/listar-receitas - 200 null application/json; charset=utf-8 241.4586ms
+2024-06-18 11:59:24.801 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-18 11:59:25.157 -03:00 [INF] Now listening on: https://localhost:7192
+2024-06-18 11:59:25.158 -03:00 [INF] Now listening on: http://localhost:5039
+2024-06-18 11:59:25.159 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-18 11:59:25.160 -03:00 [INF] Hosting environment: Development
+2024-06-18 11:59:25.160 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-06-18 11:59:25.676 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-06-18 11:59:25.929 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 257.712ms
+2024-06-18 11:59:25.969 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-06-18 11:59:25.969 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-18 11:59:25.975 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 7.1842ms
+2024-06-18 11:59:26.053 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 85.5014ms
+2024-06-18 11:59:26.215 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-06-18 11:59:26.437 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 222.2701ms
+2024-06-18 11:59:32.639 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7192/api/Receitas/listar-receitas - null null
+2024-06-18 11:59:32.812 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.ObterReceitas (Financas.Pessoais.API)'
+2024-06-18 11:59:32.835 -03:00 [INF] Route matched with {action = "ObterReceitas", controller = "Receitas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterReceitas() on controller Financas.Pessoais.API.Controllers.ReceitasController (Financas.Pessoais.API).
+2024-06-18 11:59:32.937 -03:00 [INF] Iniciando a obtenção de receitas.
+2024-06-18 11:59:33.464 -03:00 [INF] Receitas obtidas com sucesso: [{"Id":"b193336c-f49f-440b-ae39-61cd4ccac7bf","Recebido":true,"DataRecebimento":"2024-06-12T00:41:44.2200000","TipoReceita":"Pessoal","Valor":2500.00,"Descricao":"Freela Edeval","Categoria":"Freelas","StatusReceita":"RECEBIDO","$type":"ReceitasViewModel"},{"Id":"e9a3ae66-24d2-462c-b031-d4a311be9459","Recebido":true,"DataRecebimento":"2024-06-14T13:55:45.8600000","TipoReceita":"Pessoal","Valor":100.00,"Descricao":"Vale","Categoria":"Salário","StatusReceita":"RECEBIDO","$type":"ReceitasViewModel"},{"Id":"b3546ef4-c02d-46fc-85f7-7726bdb0c070","Recebido":false,"DataRecebimento":null,"TipoReceita":"Pessoal","Valor":100.00,"Descricao":"Vale","Categoria":"Salário","StatusReceita":"ABERTO","$type":"ReceitasViewModel"}]
+2024-06-18 11:59:33.477 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Financas.Pessoais.Domain.Models.ViewModels.ReceitasViewModel, Financas.Pessoais.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-18 11:59:33.518 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.ReceitasController.ObterReceitas (Financas.Pessoais.API) in 677.8758ms
+2024-06-18 11:59:33.518 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.ReceitasController.ObterReceitas (Financas.Pessoais.API)'
+2024-06-18 11:59:33.519 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7192/api/Receitas/listar-receitas - 200 null application/json; charset=utf-8 879.9872ms

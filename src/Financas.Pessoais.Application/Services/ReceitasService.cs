@@ -59,7 +59,6 @@ namespace Financas.Pessoais.Application.Services
                 DataRecebimento = receita.DataRecebimento,
                 Categoria = receita.Categoria,
                 StatusReceita = receita.Recebido ? "RECEBIDO"
-                                : receita.DataRecebimento <= DateTime.UtcNow ? "VENCIDO"
                                 : "ABERTO"
             }).ToList();
 
