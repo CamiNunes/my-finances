@@ -65,17 +65,6 @@ namespace Financas.Pessoais.Application.Services
             return receitasViewModel;
         }
 
-        //public async Task<IEnumerable<ReceitasViewModel>> ObterReceitasAsync()
-        //{
-        //    var usuario = await _userContext.GetAuthenticatedUserAsync();
-        //    if (usuario == null)
-        //    {
-        //        throw new UnauthorizedAccessException("Usuário não autenticado.");
-        //    }
-
-        //    return await _receitasRepository.ObterReceitasAsync(usuario.Email);
-        //}
-
         public async Task<IEnumerable<ReceitasViewModel>> ObterReceitasPorDescricaoAsync(string descricao)
         {
             var usuario = await _userContext.GetAuthenticatedUserAsync();
