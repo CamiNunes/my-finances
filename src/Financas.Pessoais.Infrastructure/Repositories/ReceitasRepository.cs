@@ -37,12 +37,39 @@ namespace Financas.Pessoais.Infrastructure.Repositories
             }
         }
 
-        public async Task<IEnumerable<ReceitasViewModel>> ObterReceitasAsync(string emailUsuario)
+        public async Task<IEnumerable<Receitas>> ObterReceitasAsync(string emailUsuario, int? mes = null, string status = null, string descricao = null)
         {
             using (var connection = new SqlConnection(connectionString))
             {
                 var sql = "SELECT * FROM TB_RECEITAS WHERE CriadoPor = @CriadoPor";
-                return await connection.QueryAsync<ReceitasViewModel>(sql, new { CriadoPor = emailUsuario });
+                var parameters = new DynamicParameters();
+                parameters.Add("CriadoPor", emailUsuario);
+
+                if (mes.HasValue)
+                {
+                    sql += " AND MONTH(DataRecebimento) = @Mes";
+                    parameters.Add("Mes", mes.Value);
+                }
+
+                if (!string.IsNullOrEmpty(status))
+                {
+                    if (status.Equals("RECEBIDO", StringComparison.OrdinalIgnoreCase))
+                    {
+                        sql += " AND Recebido = 1";
+                    }
+                    else if (status.Equals("ABERTO", StringComparison.OrdinalIgnoreCase))
+                    {
+                        sql += " AND Recebido = 0";
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(descricao))
+                {
+                    sql += " AND Descricao LIKE @Descricao";
+                    parameters.Add("Descricao", "%" + descricao + "%");
+                }
+
+                return await connection.QueryAsync<Receitas>(sql, parameters);
             }
         }
 

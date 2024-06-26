@@ -42,6 +42,34 @@ namespace Financas.Pessoais.Application.Services
             await _despesasRepository.IncluirDespesaAsync(novaDespesa, usuario.Email);
         }
 
+        public async Task<IEnumerable<DespesasViewModel>> ObterDespesasAsync(int? mes = null, string status = null, string descricao = null)
+        {
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
+
+            var despesas = await _despesasRepository.ObterDespesasAsync(usuario.Email, mes, status, descricao);
+
+            var despesasViewModel = despesas.Select(despesa => new DespesasViewModel
+            {
+                Id = despesa.Id,
+                Valor = despesa.Valor,
+                Descricao = despesa.Descricao,
+                Pago = despesa.Pago,
+                DataVencimento = despesa.DataVencimento,
+                DataPagamento = despesa.DataPagamento,
+                TipoDespesa = despesa.TipoDespesa,
+                Categoria = despesa.Categoria,
+                StatusDespesa = despesa.Pago ? "PAGO"
+                                : despesa.DataVencimento <= DateTime.UtcNow ? "VENCIDO"
+                                : "ABERTO"
+            }).ToList();
+
+            return despesasViewModel;
+        }
+
         public async Task<IEnumerable<DespesasViewModel>> ObterDespesasAsync()
         {
             var usuario = await _userContext.GetAuthenticatedUserAsync();

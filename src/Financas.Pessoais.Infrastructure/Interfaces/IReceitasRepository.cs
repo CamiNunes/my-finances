@@ -7,7 +7,7 @@ namespace Financas.Pessoais.Infrastructure.Interfaces
     public interface IReceitasRepository
     {
         Task IncluirReceitaAsync(ReceitasInputModel receita, string emailUsuario);
-        Task<IEnumerable<ReceitasViewModel>> ObterReceitasAsync(string emailUsuario);
+        Task<IEnumerable<Receitas>> ObterReceitasAsync(string emailUsuario, int? mes = null, string status = null, string descricao = null);
         Task<IEnumerable<ReceitasViewModel>> ObterReceitasPorDescricaoAsync(string descricao, string emailUsuario);
         Task ExcluirReceitaAsync(Guid receitaId, string emailUsuario);
     }

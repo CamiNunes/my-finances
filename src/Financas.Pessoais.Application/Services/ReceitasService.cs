@@ -39,7 +39,7 @@ namespace Financas.Pessoais.Application.Services
             await _receitasRepository.IncluirReceitaAsync(novaReceita, usuario.Email);
         }
 
-        public async Task<IEnumerable<ReceitasViewModel>> ObterReceitasAsync()
+        public async Task<IEnumerable<ReceitasViewModel>> ObterReceitasAsync(int? mes = null, string status = null, string descricao = null)
         {
             var usuario = await _userContext.GetAuthenticatedUserAsync();
             if (usuario == null)
@@ -47,7 +47,7 @@ namespace Financas.Pessoais.Application.Services
                 throw new UnauthorizedAccessException("Usuário não autenticado.");
             }
 
-            var receitas = await _receitasRepository.ObterReceitasAsync(usuario.Email);
+            var receitas = await _receitasRepository.ObterReceitasAsync(usuario.Email, mes, status, descricao);
 
             var receitasViewModel = receitas.Select(receita => new ReceitasViewModel
             {

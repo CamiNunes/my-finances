@@ -36,6 +36,48 @@ namespace Financas.Pessoais.Infrastructure.Repositories
             }
         }
 
+        public async Task<IEnumerable<Despesas>> ObterDespesasAsync(string emailUsuario, int? mes = null, string status = null, string descricao = null)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var sql = "SELECT * FROM TB_DESPESAS WHERE CriadoPor = @CriadoPor";
+                var parameters = new DynamicParameters();
+                parameters.Add("CriadoPor", emailUsuario);
+
+                if (mes.HasValue)
+                {
+                    sql += " AND MONTH(DataVencimento) = @Mes";
+                    parameters.Add("Mes", mes.Value);
+                }
+
+                if (!string.IsNullOrEmpty(status))
+                {
+                    if (status.Equals("PAGO", StringComparison.OrdinalIgnoreCase))
+                    {
+                        sql += " AND Pago = 1";
+                    }
+                    else if (status.Equals("VENCIDO", StringComparison.OrdinalIgnoreCase))
+                    {
+                        sql += " AND Pago = 0 AND DataVencimento <= @DataAtual";
+                        parameters.Add("DataAtual", DateTime.UtcNow);
+                    }
+                    else if (status.Equals("ABERTO", StringComparison.OrdinalIgnoreCase))
+                    {
+                        sql += " AND Pago = 0 AND DataVencimento > @DataAtual";
+                        parameters.Add("DataAtual", DateTime.UtcNow);
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(descricao))
+                {
+                    sql += " AND Descricao LIKE @Descricao";
+                    parameters.Add("Descricao", "%" + descricao + "%");
+                }
+
+                return await connection.QueryAsync<Despesas>(sql, parameters);
+            }
+        }
+
         public async Task<IEnumerable<Despesas>> ObterDespesasAsync(string emailUsuario)
         {
             using (var connection = new SqlConnection(connectionString))

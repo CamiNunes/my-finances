@@ -56,14 +56,15 @@ namespace Financas.Pessoais.API.Controllers
                 return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
             }
         }
+
         [HttpGet("listar-receitas")]
-        public async Task<IActionResult> ObterReceitas()
+        public async Task<IActionResult> ObterReceitas([FromQuery] int? mes = null, [FromQuery] string status = null, [FromQuery] string descricao = null)
         {
             try
             {
                 _logger.LogInformation("Iniciando a obtenção de receitas.");
 
-                var result = await _receitasService.ObterReceitasAsync();
+                var result = await _receitasService.ObterReceitasAsync(mes, status, descricao);
 
                 if (result == null || !result.Any())
                 {

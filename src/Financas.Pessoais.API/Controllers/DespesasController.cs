@@ -55,11 +55,11 @@ namespace Financas.Pessoais.API.Controllers
         }
 
         [HttpGet("listar-despesas")]
-        public async Task<IActionResult> ObterDespesas()
+        public async Task<IActionResult> ObterDespesas([FromQuery] int? mes = null, [FromQuery] string status = null, [FromQuery] string descricao = null)
         {
             try
             {
-                var result = await _despesasService.ObterDespesasAsync();
+                var result = await _despesasService.ObterDespesasAsync(mes, status, descricao);
 
                 if (result == null || !result.Any())
                 {
