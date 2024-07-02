@@ -1787,3 +1787,110 @@
 2024-07-01 20:59:55.853 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DespesasController.ObterDespesas (Financas.Pessoais.API) in 2.3725ms
 2024-07-01 20:59:55.853 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DespesasController.ObterDespesas (Financas.Pessoais.API)'
 2024-07-01 20:59:55.854 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Despesas/listar-despesas - 200 null application/json; charset=utf-8 3.017ms
+2024-07-01 22:09:02.705 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-01 22:09:02.983 -03:00 [INF] Now listening on: https://localhost:7192
+2024-07-01 22:09:02.984 -03:00 [INF] Now listening on: http://localhost:5039
+2024-07-01 22:09:02.985 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-01 22:09:02.985 -03:00 [INF] Hosting environment: Development
+2024-07-01 22:09:02.985 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-07-01 22:09:03.973 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-07-01 22:09:04.268 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 307.6457ms
+2024-07-01 22:09:04.306 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-01 22:09:04.325 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-07-01 22:09:04.328 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 22.1333ms
+2024-07-01 22:09:04.392 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.3706ms
+2024-07-01 22:09:04.547 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-07-01 22:09:04.704 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 157.6979ms
+2024-07-01 22:09:26.711 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-07-01 22:09:26.719 -03:00 [INF] CORS policy execution successful.
+2024-07-01 22:09:26.838 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-07-01 22:09:26.863 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-07-01 22:09:26.894 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-07-01 22:09:27.489 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-07-01 22:09:27.494 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-01 22:09:27.500 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 634.596ms
+2024-07-01 22:09:27.501 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-07-01 22:09:27.502 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 790.4184ms
+2024-07-01 22:09:52.466 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=07 - null null
+2024-07-01 22:09:52.526 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-01 22:09:52.530 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-01 22:09:52.533 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API) in 2.934ms
+2024-07-01 22:09:52.534 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-01 22:09:52.535 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Financas.Pessoais.Application.Interfaces.IDashboardService' while attempting to activate 'Financas.Pessoais.API.Controllers.DashboardController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method18(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-01 22:09:52.754 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=07 - 500 null text/plain; charset=utf-8 287.9033ms
+2024-07-01 22:12:03.057 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-01 22:12:03.270 -03:00 [INF] Now listening on: https://localhost:7192
+2024-07-01 22:12:03.270 -03:00 [INF] Now listening on: http://localhost:5039
+2024-07-01 22:12:03.271 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-01 22:12:03.272 -03:00 [INF] Hosting environment: Development
+2024-07-01 22:12:03.272 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-07-01 22:12:03.974 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-07-01 22:12:04.166 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 193.0087ms
+2024-07-01 22:12:04.166 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-01 22:12:04.172 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 5.8709ms
+2024-07-01 22:12:04.188 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-07-01 22:12:04.222 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.1984ms
+2024-07-01 22:12:04.367 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-07-01 22:12:04.489 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 122.659ms
+2024-07-01 22:12:25.405 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-07-01 22:12:25.411 -03:00 [INF] CORS policy execution successful.
+2024-07-01 22:12:26.189 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-07-01 22:12:26.207 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-07-01 22:12:26.233 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-07-01 22:12:27.086 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-07-01 22:12:27.091 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-01 22:12:27.098 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 887.728ms
+2024-07-01 22:12:27.099 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-07-01 22:12:27.100 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 1695.0199ms
+2024-07-01 22:12:44.605 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=07 - null null
+2024-07-01 22:12:44.652 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-01 22:12:44.656 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-01 22:12:47.944 -03:00 [INF] Endpoint 'SomaDasDespesasDoMes' foi chamado.
+2024-07-01 22:13:36.413 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-01 22:13:36.675 -03:00 [INF] Now listening on: https://localhost:7192
+2024-07-01 22:13:36.676 -03:00 [INF] Now listening on: http://localhost:5039
+2024-07-01 22:13:36.677 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-01 22:13:36.677 -03:00 [INF] Hosting environment: Development
+2024-07-01 22:13:36.677 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-07-01 22:13:37.777 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-07-01 22:13:38.027 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 254.279ms
+2024-07-01 22:13:38.063 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-01 22:13:38.063 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-07-01 22:13:38.067 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 4.0507ms
+2024-07-01 22:13:38.147 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 84.4912ms
+2024-07-01 22:13:38.285 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-07-01 22:13:38.430 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 145.1518ms
+2024-07-01 22:13:51.599 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-07-01 22:13:51.604 -03:00 [INF] CORS policy execution successful.
+2024-07-01 22:13:51.669 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-07-01 22:13:51.687 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-07-01 22:13:51.714 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-07-01 22:13:52.028 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-07-01 22:13:52.034 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-01 22:13:52.041 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 350.2733ms
+2024-07-01 22:13:52.041 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-07-01 22:13:52.042 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 443.6166ms
+2024-07-01 22:14:10.643 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=07 - null null
+2024-07-01 22:14:10.688 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-01 22:14:10.691 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-01 22:14:13.377 -03:00 [INF] Endpoint 'SomaDasDespesasDoMes' foi chamado.
+2024-07-01 22:15:23.454 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-01 22:15:23.466 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API) in 72774.4996ms
+2024-07-01 22:15:23.466 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-01 22:15:23.466 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=07 - 200 null application/json; charset=utf-8 72823.1694ms

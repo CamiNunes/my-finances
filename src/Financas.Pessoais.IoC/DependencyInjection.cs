@@ -18,7 +18,8 @@ namespace Financas.Pessoais.IoC
             // Application Layer
             services.AddScoped<IDespesasService, DespesasService>();
             services.AddScoped<IReceitasService, ReceitasService>();
-            services.AddScoped<ICategoriasService, CategoriasService>();            
+            services.AddScoped<ICategoriasService, CategoriasService>();
+            services.AddScoped<IDashboardService, DashboardService>();
             services.AddScoped<AuthService>();
             services.AddScoped<UserContext>();
 
@@ -27,6 +28,7 @@ namespace Financas.Pessoais.IoC
             services.AddScoped<IReceitasRepository>(provider => new ReceitasRepository(connectionString));
             services.AddScoped<ICategoriasRepository>(provider => new CategoriasRepository(connectionString));
             services.AddScoped<IUserRepository>(provider => new UserRepository(connectionString));
+            services.AddScoped<IDashboardRepository>(provider => new DashboardRepository(connectionString));
         }
     }
 }
