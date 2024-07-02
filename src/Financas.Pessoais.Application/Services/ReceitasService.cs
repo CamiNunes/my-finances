@@ -75,9 +75,9 @@ namespace Financas.Pessoais.Application.Services
                 Valor = receita.Valor,
                 Recebido = receita.Recebido, // Recebido agora é definido de acordo com o valor de "Sim" ou "Não"
                 DataRecebimento = receita.DataRecebimento,
+                DataLancamento = receita.DataLancamento,
                 Categoria = receita.Categoria,
-                StatusReceita = receita.Recebido ? "RECEBIDO"
-                                : "ABERTO"
+                StatusReceita = receita.Recebido ? "RECEBIDO" : "ABERTO"
             }).ToList();
 
             return receitasViewModel;

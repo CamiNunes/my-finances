@@ -6,6 +6,7 @@ namespace Financas.Pessoais.Domain.Models.ViewModels
     {
         public Guid Id { get; set; }
         public bool Recebido { get; set; }
+        public DateTime DataLancamento { get; set; }
         public DateTime? DataRecebimento { get; set; }
         public TipoReceitaEnum TipoReceita { get; set; }
         public decimal Valor { get; set; }
