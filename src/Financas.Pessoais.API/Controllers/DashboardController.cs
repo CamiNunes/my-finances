@@ -111,5 +111,23 @@ namespace Financas.Pessoais.API.Controllers
                 return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
             }
         }
+
+        [HttpGet("listar-despesas-abertas-mes")]
+        public async Task<IActionResult> ListasDespesasAbertasNoMes(int mes)
+        {
+            try
+            {
+                _logger.LogInformation("Endpoint 'ListarContasEmAberto' foi chamado.");
+
+                var result = _dashboardService.ListarContasEmAberto(mes);
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao processar a solicitação.");
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
+        }
     }
 }

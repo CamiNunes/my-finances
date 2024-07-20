@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Financas.Pessoais.Domain.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,6 @@ namespace Financas.Pessoais.Application.Interfaces
         int ObterQuantidadeDespesasProximasVencimento(int mes);
         decimal ObterSomaDasReceitasDoMes(int mes);
         decimal ObterDiferencaReceitasDespesas(int mes);
+        public List<DespesasDashboardDTO> ListarContasEmAberto(int mes);
     }
 }

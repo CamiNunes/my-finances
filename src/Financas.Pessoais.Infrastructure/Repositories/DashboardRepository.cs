@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Financas.Pessoais.Domain.DTOs;
 using Financas.Pessoais.Infrastructure.Interfaces;
 using Microsoft.Data.SqlClient;
 using System;
@@ -122,5 +123,25 @@ namespace Financas.Pessoais.Infrastructure.Repositories
             }
         }
 
+        public List<DespesasDashboardDTO> ListarContasEmAberto(int mes, string emailUsuario)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string query = @"
+                                  SELECT 
+	                                DESCRICAO, VALOR, DATAVENCIMENTO 
+                                  FROM 
+	                                TB_DESPESAS 
+                                  WHERE 
+	                                MONTH(DATAVENCIMENTO) = @Mes AND 
+                                    CriadoPor = @EmailUsuario";
+
+                var despesas = connection.Query<DespesasDashboardDTO>(query, new { Mes = mes, EmailUsuario = emailUsuario }).ToList();
+
+                return despesas;
+            }
+        }
     }
 }

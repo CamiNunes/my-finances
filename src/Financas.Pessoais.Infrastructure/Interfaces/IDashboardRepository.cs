@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Financas.Pessoais.Domain.DTOs;
+using Financas.Pessoais.Domain.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +15,6 @@ namespace Financas.Pessoais.Infrastructure.Interfaces
         int ObterQuantidadeDespesasProximasVencimento(int mes, string emailUsuario);
         decimal ObterSomaDasReceitasDoMes(int mes, string emailUsuario);
         decimal ObterDiferencaReceitasDespesas(int mes, string emailUsuario);
+        List<DespesasDashboardDTO> ListarContasEmAberto(int mes, string emailUsuario);
     }
 }

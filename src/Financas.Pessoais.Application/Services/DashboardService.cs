@@ -1,4 +1,5 @@
 ﻿using Financas.Pessoais.Application.Interfaces;
+using Financas.Pessoais.Domain.DTOs;
 using Financas.Pessoais.Domain.Enums;
 using Financas.Pessoais.Domain.Models.ViewModels;
 using Financas.Pessoais.Infrastructure.Interfaces;
@@ -25,6 +26,18 @@ namespace Financas.Pessoais.Application.Services
             _dashboardRepository = dashboardRepository;
             _userContext = userContext;
             _logger = logger;
+        }
+
+        public List<DespesasDashboardDTO> ListarContasEmAberto(int mes)
+        {
+            var usuario = _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
+
+            var listaContas = _dashboardRepository.ListarContasEmAberto(mes, usuario.Result.Email);
+            return listaContas;
         }
 
         public decimal ObterDiferencaReceitasDespesas(int mes)

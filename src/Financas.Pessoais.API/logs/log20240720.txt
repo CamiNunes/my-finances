@@ -1796,3 +1796,683 @@ System.InvalidOperationException: StatusCode cannot be set because the response 
 2024-07-20 17:51:05.973 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API) in 2.7501ms
 2024-07-20 17:51:05.974 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
 2024-07-20 17:51:05.974 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 200 null application/json; charset=utf-8 5.9602ms
+2024-07-20 18:16:23.503 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-20 18:16:23.713 -03:00 [INF] Now listening on: https://localhost:7192
+2024-07-20 18:16:23.713 -03:00 [INF] Now listening on: http://localhost:5039
+2024-07-20 18:16:23.715 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-20 18:16:23.715 -03:00 [INF] Hosting environment: Development
+2024-07-20 18:16:23.715 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-07-20 18:16:24.583 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-07-20 18:16:24.779 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 200.5752ms
+2024-07-20 18:16:24.853 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-20 18:16:24.866 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-07-20 18:16:24.870 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 17.1136ms
+2024-07-20 18:16:24.929 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.3423ms
+2024-07-20 18:16:25.109 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-07-20 18:16:25.247 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 138.85ms
+2024-07-20 18:16:44.238 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-07-20 18:16:44.244 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:16:44.978 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-07-20 18:16:44.995 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-07-20 18:16:45.020 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-07-20 18:16:45.805 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-07-20 18:16:45.810 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-20 18:16:45.817 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 818.7465ms
+2024-07-20 18:16:45.818 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-07-20 18:16:45.818 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 1581.28ms
+2024-07-20 18:17:14.323 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=07 - null null
+2024-07-20 18:17:14.371 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API)'
+2024-07-20 18:17:14.375 -03:00 [INF] Route matched with {action = "ListasDespesasAbertasNoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListasDespesasAbertasNoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:17:14.464 -03:00 [INF] Endpoint 'ListarContasEmAberto' foi chamado.
+2024-07-20 18:17:14.478 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Financas.Pessoais.Domain.DTOs.DespesasDashboardDTO, Financas.Pessoais.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-20 18:17:14.489 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API) in 114.1163ms
+2024-07-20 18:17:14.489 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API)'
+2024-07-20 18:17:14.489 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=07 - 200 null application/json; charset=utf-8 166.9903ms
+2024-07-20 18:18:20.367 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-20 18:18:20.591 -03:00 [INF] Now listening on: https://localhost:7192
+2024-07-20 18:18:20.591 -03:00 [INF] Now listening on: http://localhost:5039
+2024-07-20 18:18:20.593 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-20 18:18:20.593 -03:00 [INF] Hosting environment: Development
+2024-07-20 18:18:20.593 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-07-20 18:18:21.467 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-07-20 18:18:21.751 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 287.0248ms
+2024-07-20 18:18:21.765 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-20 18:18:21.765 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-07-20 18:18:21.772 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 7.985ms
+2024-07-20 18:18:21.844 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.3004ms
+2024-07-20 18:18:22.032 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-07-20 18:18:22.180 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 148.4718ms
+2024-07-20 18:18:40.871 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 64
+2024-07-20 18:18:40.876 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:18:40.930 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-07-20 18:18:40.947 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-07-20 18:18:40.973 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-07-20 18:18:41.274 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-07-20 18:18:41.278 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-20 18:18:41.284 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 334.1209ms
+2024-07-20 18:18:41.285 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-07-20 18:18:41.286 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 415.395ms
+2024-07-20 18:20:04.923 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=07 - null null
+2024-07-20 18:20:04.965 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API)'
+2024-07-20 18:20:04.968 -03:00 [INF] Route matched with {action = "ListasDespesasAbertasNoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListasDespesasAbertasNoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:20:05.036 -03:00 [INF] Endpoint 'ListarContasEmAberto' foi chamado.
+2024-07-20 18:20:05.046 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Financas.Pessoais.Domain.DTOs.DespesasDashboardDTO, Financas.Pessoais.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-20 18:20:05.057 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API) in 88.7828ms
+2024-07-20 18:20:05.058 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API)'
+2024-07-20 18:20:05.058 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=07 - 200 null application/json; charset=utf-8 137.424ms
+2024-07-20 18:40:59.505 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-20 18:40:59.855 -03:00 [INF] Now listening on: https://localhost:7192
+2024-07-20 18:40:59.855 -03:00 [INF] Now listening on: http://localhost:5039
+2024-07-20 18:40:59.856 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-20 18:40:59.857 -03:00 [INF] Hosting environment: Development
+2024-07-20 18:40:59.857 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-07-20 18:41:01.427 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-07-20 18:41:01.696 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 267.1857ms
+2024-07-20 18:41:01.732 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-20 18:41:01.749 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 17.4648ms
+2024-07-20 18:41:01.757 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-07-20 18:41:01.841 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 84.3353ms
+2024-07-20 18:41:02.045 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-07-20 18:41:02.300 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 254.0672ms
+2024-07-20 18:45:42.475 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-20 18:45:42.749 -03:00 [INF] Now listening on: https://localhost:7192
+2024-07-20 18:45:42.750 -03:00 [INF] Now listening on: http://localhost:5039
+2024-07-20 18:45:42.751 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-20 18:45:42.751 -03:00 [INF] Hosting environment: Development
+2024-07-20 18:45:42.751 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-07-20 18:45:43.889 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-07-20 18:45:44.078 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 191.8548ms
+2024-07-20 18:45:44.126 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-20 18:45:44.126 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-07-20 18:45:44.131 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 5.3794ms
+2024-07-20 18:45:44.198 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.0796ms
+2024-07-20 18:45:44.343 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-07-20 18:45:44.474 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.2949ms
+2024-07-20 18:46:39.142 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:46:39.148 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:39.149 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 204 null null 7.1271ms
+2024-07-20 18:46:39.155 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:46:39.156 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:40.126 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:40.152 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:40.289 -03:00 [INF] Endpoint 'SomaDasDespesasDoMes' foi chamado.
+2024-07-20 18:46:41.242 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:46:41.252 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API) in 1096.4456ms
+2024-07-20 18:46:41.252 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:41.252 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 200 null application/json; charset=utf-8 2097.0749ms
+2024-07-20 18:46:41.256 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:46:41.258 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:41.258 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 204 null null 2.1873ms
+2024-07-20 18:46:41.261 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:46:41.261 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:41.263 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:41.267 -03:00 [INF] Route matched with {action = "ObterSomaDaReceitasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDaReceitasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:41.268 -03:00 [INF] Endpoint 'SomaDasReceitasDoMes' foi chamado.
+2024-07-20 18:46:41.275 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:46:41.275 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API) in 8.7376ms
+2024-07-20 18:46:41.275 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:41.276 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 200 null application/json; charset=utf-8 15.0604ms
+2024-07-20 18:46:41.280 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:46:41.280 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:41.280 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 204 null null 0.4377ms
+2024-07-20 18:46:41.283 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:46:41.283 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:41.286 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:46:41.288 -03:00 [INF] Route matched with {action = "ObterDiferencaReceitasDespesas", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDiferencaReceitasDespesas(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:41.291 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:46:41.296 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:46:41.297 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API) in 8.3892ms
+2024-07-20 18:46:41.297 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:46:41.297 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 200 null application/json; charset=utf-8 14.1745ms
+2024-07-20 18:46:41.300 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:46:41.301 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:41.301 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 204 null null 0.6896ms
+2024-07-20 18:46:41.303 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:46:41.303 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:41.304 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:41.306 -03:00 [INF] Route matched with {action = "ObterDespesasAVencerDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDespesasAVencerDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:41.307 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:46:41.311 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-07-20 18:46:41.313 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API) in 6.2399ms
+2024-07-20 18:46:41.313 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:41.313 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 200 null application/json; charset=utf-8 9.8567ms
+2024-07-20 18:46:41.317 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:46:41.317 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:41.317 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 204 null null 0.3176ms
+2024-07-20 18:46:41.319 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:46:41.320 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:41.320 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:41.322 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasEmAbertoDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasEmAbertoDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:41.323 -03:00 [INF] Endpoint 'SomaDasDespesasEmAbertoDoMes' foi chamado.
+2024-07-20 18:46:41.325 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:46:41.325 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API) in 2.9491ms
+2024-07-20 18:46:41.325 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:41.326 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 200 null application/json; charset=utf-8 6.1899ms
+2024-07-20 18:46:54.026 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=1 - null null
+2024-07-20 18:46:54.027 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:54.028 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=1 - 204 null null 1.1ms
+2024-07-20 18:46:54.031 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=1 - null null
+2024-07-20 18:46:54.031 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:54.031 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:54.032 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:54.032 -03:00 [INF] Endpoint 'SomaDasDespesasDoMes' foi chamado.
+2024-07-20 18:46:54.033 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:46:54.033 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API) in 1.4897ms
+2024-07-20 18:46:54.033 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:54.033 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=1 - 200 null application/json; charset=utf-8 2.8891ms
+2024-07-20 18:46:54.039 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=1 - null null
+2024-07-20 18:46:54.039 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:54.040 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=1 - 204 null null 0.8513ms
+2024-07-20 18:46:54.043 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=1 - null null
+2024-07-20 18:46:54.043 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:54.044 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:54.044 -03:00 [INF] Route matched with {action = "ObterSomaDaReceitasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDaReceitasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:54.044 -03:00 [INF] Endpoint 'SomaDasReceitasDoMes' foi chamado.
+2024-07-20 18:46:54.045 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:46:54.045 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API) in 1.2315ms
+2024-07-20 18:46:54.045 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:54.045 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=1 - 200 null application/json; charset=utf-8 2.7038ms
+2024-07-20 18:46:54.052 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=1 - null null
+2024-07-20 18:46:54.052 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:54.052 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=1 - 204 null null 0.4654ms
+2024-07-20 18:46:54.056 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=1 - null null
+2024-07-20 18:46:54.056 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:54.056 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:46:54.056 -03:00 [INF] Route matched with {action = "ObterDiferencaReceitasDespesas", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDiferencaReceitasDespesas(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:54.057 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:46:54.057 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:46:54.058 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API) in 1.0459ms
+2024-07-20 18:46:54.058 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:46:54.058 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=1 - 200 null application/json; charset=utf-8 2.3675ms
+2024-07-20 18:46:54.062 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=1 - null null
+2024-07-20 18:46:54.063 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:54.063 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=1 - 204 null null 0.3749ms
+2024-07-20 18:46:54.066 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=1 - null null
+2024-07-20 18:46:54.066 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:54.067 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:54.067 -03:00 [INF] Route matched with {action = "ObterDespesasAVencerDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDespesasAVencerDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:54.067 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:46:54.067 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-07-20 18:46:54.067 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API) in 0.8193ms
+2024-07-20 18:46:54.068 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:54.068 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=1 - 200 null application/json; charset=utf-8 1.8226ms
+2024-07-20 18:46:54.072 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=1 - null null
+2024-07-20 18:46:54.072 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:54.072 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=1 - 204 null null 0.3839ms
+2024-07-20 18:46:54.075 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=1 - null null
+2024-07-20 18:46:54.075 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:54.075 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:54.075 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasEmAbertoDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasEmAbertoDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:54.075 -03:00 [INF] Endpoint 'SomaDasDespesasEmAbertoDoMes' foi chamado.
+2024-07-20 18:46:54.076 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:46:54.076 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API) in 0.8734ms
+2024-07-20 18:46:54.076 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:54.076 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=1 - 200 null application/json; charset=utf-8 1.8166ms
+2024-07-20 18:46:59.032 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:46:59.032 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:59.032 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 204 null null 0.6575ms
+2024-07-20 18:46:59.035 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:46:59.036 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:59.036 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:59.036 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:59.036 -03:00 [INF] Endpoint 'SomaDasDespesasDoMes' foi chamado.
+2024-07-20 18:46:59.037 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:46:59.037 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API) in 1.1715ms
+2024-07-20 18:46:59.037 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:59.038 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 200 null application/json; charset=utf-8 2.4413ms
+2024-07-20 18:46:59.042 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:46:59.043 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:59.043 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 204 null null 0.511ms
+2024-07-20 18:46:59.046 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:46:59.046 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:59.046 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:59.046 -03:00 [INF] Route matched with {action = "ObterSomaDaReceitasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDaReceitasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:59.047 -03:00 [INF] Endpoint 'SomaDasReceitasDoMes' foi chamado.
+2024-07-20 18:46:59.047 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:46:59.047 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API) in 0.722ms
+2024-07-20 18:46:59.047 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:59.047 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 200 null application/json; charset=utf-8 1.8719ms
+2024-07-20 18:46:59.052 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:46:59.052 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:59.053 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 204 null null 0.4569ms
+2024-07-20 18:46:59.056 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:46:59.056 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:59.057 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:46:59.057 -03:00 [INF] Route matched with {action = "ObterDiferencaReceitasDespesas", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDiferencaReceitasDespesas(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:59.057 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:46:59.057 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:46:59.058 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API) in 1.0248ms
+2024-07-20 18:46:59.058 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:46:59.058 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 200 null application/json; charset=utf-8 2.295ms
+2024-07-20 18:46:59.062 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:46:59.063 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:59.063 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 204 null null 0.453ms
+2024-07-20 18:46:59.065 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:46:59.065 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:59.066 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:59.066 -03:00 [INF] Route matched with {action = "ObterDespesasAVencerDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDespesasAVencerDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:59.066 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:46:59.066 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-07-20 18:46:59.067 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API) in 0.7408ms
+2024-07-20 18:46:59.067 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:59.067 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 200 null application/json; charset=utf-8 1.7883ms
+2024-07-20 18:46:59.072 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:46:59.072 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:59.073 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 204 null null 0.39ms
+2024-07-20 18:46:59.076 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:46:59.076 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:46:59.077 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:59.077 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasEmAbertoDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasEmAbertoDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:46:59.077 -03:00 [INF] Endpoint 'SomaDasDespesasEmAbertoDoMes' foi chamado.
+2024-07-20 18:46:59.077 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:46:59.078 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API) in 0.8315ms
+2024-07-20 18:46:59.078 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:46:59.078 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 200 null application/json; charset=utf-8 1.8783ms
+2024-07-20 18:47:03.132 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=1 - null null
+2024-07-20 18:47:03.132 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:03.132 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=1 - 204 null null 0.4017ms
+2024-07-20 18:47:03.135 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=1 - null null
+2024-07-20 18:47:03.135 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:03.135 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:03.135 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:47:03.136 -03:00 [INF] Endpoint 'SomaDasDespesasDoMes' foi chamado.
+2024-07-20 18:47:03.136 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:47:03.136 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API) in 0.8309ms
+2024-07-20 18:47:03.136 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:03.136 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=1 - 200 null application/json; charset=utf-8 1.9665ms
+2024-07-20 18:47:03.141 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=1 - null null
+2024-07-20 18:47:03.141 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:03.141 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=1 - 204 null null 0.3607ms
+2024-07-20 18:47:03.145 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=1 - null null
+2024-07-20 18:47:03.145 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:03.145 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:03.145 -03:00 [INF] Route matched with {action = "ObterSomaDaReceitasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDaReceitasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:47:03.145 -03:00 [INF] Endpoint 'SomaDasReceitasDoMes' foi chamado.
+2024-07-20 18:47:03.146 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:47:03.146 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API) in 0.7082ms
+2024-07-20 18:47:03.146 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:03.146 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=1 - 200 null application/json; charset=utf-8 1.6507ms
+2024-07-20 18:47:03.150 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=1 - null null
+2024-07-20 18:47:03.150 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:03.150 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=1 - 204 null null 0.562ms
+2024-07-20 18:47:03.152 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=1 - null null
+2024-07-20 18:47:03.152 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:03.153 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:47:03.153 -03:00 [INF] Route matched with {action = "ObterDiferencaReceitasDespesas", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDiferencaReceitasDespesas(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:47:03.153 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:47:03.153 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:47:03.154 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API) in 0.6865ms
+2024-07-20 18:47:03.154 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:47:03.154 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=1 - 200 null application/json; charset=utf-8 1.4817ms
+2024-07-20 18:47:03.157 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=1 - null null
+2024-07-20 18:47:03.157 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:03.157 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=1 - 204 null null 0.4826ms
+2024-07-20 18:47:03.160 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=1 - null null
+2024-07-20 18:47:03.160 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:03.160 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:03.160 -03:00 [INF] Route matched with {action = "ObterDespesasAVencerDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDespesasAVencerDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:47:03.161 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:47:03.161 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-07-20 18:47:03.161 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API) in 0.6742ms
+2024-07-20 18:47:03.161 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:03.161 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=1 - 200 null application/json; charset=utf-8 1.4629ms
+2024-07-20 18:47:03.165 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=1 - null null
+2024-07-20 18:47:03.165 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:03.165 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=1 - 204 null null 0.4073ms
+2024-07-20 18:47:03.168 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=1 - null null
+2024-07-20 18:47:03.168 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:03.169 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:03.169 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasEmAbertoDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasEmAbertoDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:47:03.169 -03:00 [INF] Endpoint 'SomaDasDespesasEmAbertoDoMes' foi chamado.
+2024-07-20 18:47:03.170 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:47:03.170 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API) in 1.2752ms
+2024-07-20 18:47:03.170 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:03.170 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=1 - 200 null application/json; charset=utf-8 3.0245ms
+2024-07-20 18:47:07.151 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:47:07.151 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:07.151 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 204 null null 0.7568ms
+2024-07-20 18:47:07.157 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:47:07.157 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:07.157 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:07.157 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:47:07.157 -03:00 [INF] Endpoint 'SomaDasDespesasDoMes' foi chamado.
+2024-07-20 18:47:07.160 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:47:07.160 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API) in 2.4309ms
+2024-07-20 18:47:07.160 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:07.160 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 200 null application/json; charset=utf-8 4.4147ms
+2024-07-20 18:47:07.166 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:47:07.166 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:07.166 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 204 null null 1.2679ms
+2024-07-20 18:47:07.169 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:47:07.169 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:07.170 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:07.170 -03:00 [INF] Route matched with {action = "ObterSomaDaReceitasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDaReceitasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:47:07.170 -03:00 [INF] Endpoint 'SomaDasReceitasDoMes' foi chamado.
+2024-07-20 18:47:07.172 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:47:07.172 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API) in 1.9886ms
+2024-07-20 18:47:07.172 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:07.172 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 200 null application/json; charset=utf-8 2.9881ms
+2024-07-20 18:47:07.176 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:47:07.176 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:07.176 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 204 null null 0.4837ms
+2024-07-20 18:47:07.179 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:47:07.179 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:07.179 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:47:07.179 -03:00 [INF] Route matched with {action = "ObterDiferencaReceitasDespesas", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDiferencaReceitasDespesas(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:47:07.179 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:47:07.183 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:47:07.183 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API) in 3.8902ms
+2024-07-20 18:47:07.183 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:47:07.183 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 200 null application/json; charset=utf-8 4.6473ms
+2024-07-20 18:47:07.188 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:47:07.188 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:07.188 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 204 null null 0.5844ms
+2024-07-20 18:47:07.191 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:47:07.191 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:07.192 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:07.192 -03:00 [INF] Route matched with {action = "ObterDespesasAVencerDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDespesasAVencerDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:47:07.192 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:47:07.193 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-07-20 18:47:07.193 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API) in 1.6436ms
+2024-07-20 18:47:07.193 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:07.193 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 200 null application/json; charset=utf-8 2.7294ms
+2024-07-20 18:47:07.198 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:47:07.198 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:07.198 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 204 null null 0.4819ms
+2024-07-20 18:47:07.201 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:47:07.201 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:47:07.201 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:07.201 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasEmAbertoDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasEmAbertoDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:47:07.201 -03:00 [INF] Endpoint 'SomaDasDespesasEmAbertoDoMes' foi chamado.
+2024-07-20 18:47:07.203 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:47:07.204 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API) in 2.3056ms
+2024-07-20 18:47:07.204 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:47:07.204 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 200 null application/json; charset=utf-8 3.171ms
+2024-07-20 18:51:56.175 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:51:56.175 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:51:56.175 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 204 null null 0.4986ms
+2024-07-20 18:51:56.184 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:51:56.185 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:51:56.185 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:51:56.186 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:51:56.186 -03:00 [INF] Endpoint 'SomaDasDespesasDoMes' foi chamado.
+2024-07-20 18:51:56.190 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:51:56.190 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API) in 4.7051ms
+2024-07-20 18:51:56.190 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:51:56.190 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 200 null application/json; charset=utf-8 6.0829ms
+2024-07-20 18:51:56.196 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:51:56.196 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:51:56.196 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 204 null null 0.6644ms
+2024-07-20 18:51:56.201 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:51:56.202 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:51:56.202 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:51:56.202 -03:00 [INF] Route matched with {action = "ObterSomaDaReceitasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDaReceitasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:51:56.202 -03:00 [INF] Endpoint 'SomaDasReceitasDoMes' foi chamado.
+2024-07-20 18:51:56.207 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:51:56.207 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API) in 5.1137ms
+2024-07-20 18:51:56.207 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:51:56.207 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 200 null application/json; charset=utf-8 6.6183ms
+2024-07-20 18:51:56.211 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:51:56.211 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:51:56.211 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 204 null null 0.2745ms
+2024-07-20 18:51:56.213 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:51:56.213 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:51:56.213 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:51:56.214 -03:00 [INF] Route matched with {action = "ObterDiferencaReceitasDespesas", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDiferencaReceitasDespesas(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:51:56.214 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:51:56.218 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:51:56.218 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API) in 4.925ms
+2024-07-20 18:51:56.219 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:51:56.219 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 200 null application/json; charset=utf-8 5.6187ms
+2024-07-20 18:51:56.223 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:51:56.223 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:51:56.223 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 204 null null 0.2391ms
+2024-07-20 18:51:56.225 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:51:56.225 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:51:56.226 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:51:56.226 -03:00 [INF] Route matched with {action = "ObterDespesasAVencerDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDespesasAVencerDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:51:56.226 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:51:56.230 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-07-20 18:51:56.230 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API) in 3.9848ms
+2024-07-20 18:51:56.230 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:51:56.230 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 200 null application/json; charset=utf-8 4.5629ms
+2024-07-20 18:51:56.233 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:51:56.233 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:51:56.233 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 204 null null 0.2106ms
+2024-07-20 18:51:56.235 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:51:56.236 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:51:56.236 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:51:56.236 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasEmAbertoDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasEmAbertoDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:51:56.236 -03:00 [INF] Endpoint 'SomaDasDespesasEmAbertoDoMes' foi chamado.
+2024-07-20 18:51:56.240 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:51:56.240 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API) in 4.5342ms
+2024-07-20 18:51:56.240 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:51:56.241 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 200 null application/json; charset=utf-8 5.1758ms
+2024-07-20 18:51:56.245 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - null null
+2024-07-20 18:51:56.245 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:51:56.246 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - 204 null null 0.2145ms
+2024-07-20 18:51:56.248 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - null null
+2024-07-20 18:51:56.248 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:51:56.248 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API)'
+2024-07-20 18:51:56.252 -03:00 [INF] Route matched with {action = "ListasDespesasAbertasNoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListasDespesasAbertasNoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:51:56.253 -03:00 [INF] Endpoint 'ListarContasEmAberto' foi chamado.
+2024-07-20 18:51:56.324 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Financas.Pessoais.Domain.DTOs.DespesasDashboardDTO, Financas.Pessoais.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-20 18:51:56.337 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API) in 84.9019ms
+2024-07-20 18:51:56.337 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API)'
+2024-07-20 18:51:56.337 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - 200 null application/json; charset=utf-8 89.4643ms
+2024-07-20 18:53:25.984 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:53:25.984 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:53:25.984 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 204 null null 0.3364ms
+2024-07-20 18:53:25.995 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:53:26.033 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:53:26.036 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:53:26.036 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:53:26.036 -03:00 [INF] Endpoint 'SomaDasDespesasDoMes' foi chamado.
+2024-07-20 18:53:26.040 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:53:26.040 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API) in 4.2714ms
+2024-07-20 18:53:26.040 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:53:26.040 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 200 null application/json; charset=utf-8 44.9575ms
+2024-07-20 18:53:26.045 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:53:26.045 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:53:26.045 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 204 null null 0.4336ms
+2024-07-20 18:53:26.047 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:53:26.047 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:53:26.048 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:53:26.048 -03:00 [INF] Route matched with {action = "ObterSomaDaReceitasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDaReceitasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:53:26.048 -03:00 [INF] Endpoint 'SomaDasReceitasDoMes' foi chamado.
+2024-07-20 18:53:26.050 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:53:26.050 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API) in 2.0072ms
+2024-07-20 18:53:26.050 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:53:26.050 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 200 null application/json; charset=utf-8 2.7019ms
+2024-07-20 18:53:26.053 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:53:26.053 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:53:26.053 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 204 null null 0.1725ms
+2024-07-20 18:53:26.055 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:53:26.055 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:53:26.055 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:53:26.055 -03:00 [INF] Route matched with {action = "ObterDiferencaReceitasDespesas", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDiferencaReceitasDespesas(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:53:26.056 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:53:26.062 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:53:26.062 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API) in 6.2115ms
+2024-07-20 18:53:26.062 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:53:26.062 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 200 null application/json; charset=utf-8 6.8668ms
+2024-07-20 18:53:26.066 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:53:26.066 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:53:26.066 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 204 null null 0.2974ms
+2024-07-20 18:53:26.068 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:53:26.068 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:53:26.071 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:53:26.071 -03:00 [INF] Route matched with {action = "ObterDespesasAVencerDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDespesasAVencerDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:53:26.074 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:53:26.081 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-07-20 18:53:26.081 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API) in 9.7359ms
+2024-07-20 18:53:26.083 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:53:26.083 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 200 null application/json; charset=utf-8 15.1758ms
+2024-07-20 18:53:26.086 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:53:26.086 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:53:26.086 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 204 null null 0.3615ms
+2024-07-20 18:53:26.088 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:53:26.089 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:53:26.089 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:53:26.089 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasEmAbertoDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasEmAbertoDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:53:26.089 -03:00 [INF] Endpoint 'SomaDasDespesasEmAbertoDoMes' foi chamado.
+2024-07-20 18:53:26.090 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:53:26.091 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API) in 1.6969ms
+2024-07-20 18:53:26.091 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:53:26.091 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 200 null application/json; charset=utf-8 2.1637ms
+2024-07-20 18:53:26.095 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - null null
+2024-07-20 18:53:26.095 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:53:26.095 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - 204 null null 0.3963ms
+2024-07-20 18:53:26.097 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - null null
+2024-07-20 18:53:26.097 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:53:26.097 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API)'
+2024-07-20 18:53:26.097 -03:00 [INF] Route matched with {action = "ListasDespesasAbertasNoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListasDespesasAbertasNoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:53:26.098 -03:00 [INF] Endpoint 'ListarContasEmAberto' foi chamado.
+2024-07-20 18:53:26.099 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Financas.Pessoais.Domain.DTOs.DespesasDashboardDTO, Financas.Pessoais.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-20 18:53:26.099 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API) in 1.5485ms
+2024-07-20 18:53:26.099 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API)'
+2024-07-20 18:53:26.099 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - 200 null application/json; charset=utf-8 2.1785ms
+2024-07-20 18:55:30.416 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:55:30.416 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:55:30.417 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 204 null null 1.0875ms
+2024-07-20 18:55:30.420 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:55:30.420 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:55:30.420 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:55:30.421 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:55:30.421 -03:00 [INF] Endpoint 'SomaDasDespesasDoMes' foi chamado.
+2024-07-20 18:55:30.423 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:55:30.424 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API) in 3.2992ms
+2024-07-20 18:55:30.424 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:55:30.424 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 200 null application/json; charset=utf-8 4.6568ms
+2024-07-20 18:55:30.429 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:55:30.429 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:55:30.429 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 204 null null 0.5346ms
+2024-07-20 18:55:30.432 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:55:30.432 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:55:30.432 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:55:30.432 -03:00 [INF] Route matched with {action = "ObterSomaDaReceitasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDaReceitasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:55:30.432 -03:00 [INF] Endpoint 'SomaDasReceitasDoMes' foi chamado.
+2024-07-20 18:55:30.434 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:55:30.434 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API) in 1.9509ms
+2024-07-20 18:55:30.434 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:55:30.434 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 200 null application/json; charset=utf-8 2.6002ms
+2024-07-20 18:55:30.438 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:55:30.438 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:55:30.438 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 204 null null 0.4863ms
+2024-07-20 18:55:30.441 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:55:30.441 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:55:30.441 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:55:30.441 -03:00 [INF] Route matched with {action = "ObterDiferencaReceitasDespesas", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDiferencaReceitasDespesas(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:55:30.441 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:55:30.448 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:55:30.448 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API) in 6.7039ms
+2024-07-20 18:55:30.448 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:55:30.448 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 200 null application/json; charset=utf-8 7.5415ms
+2024-07-20 18:55:30.455 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:55:30.455 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:55:30.455 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 204 null null 0.8246ms
+2024-07-20 18:55:30.457 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:55:30.457 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:55:30.458 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:55:30.458 -03:00 [INF] Route matched with {action = "ObterDespesasAVencerDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDespesasAVencerDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:55:30.458 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:55:30.459 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-07-20 18:55:30.459 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API) in 1.4238ms
+2024-07-20 18:55:30.459 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:55:30.459 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 200 null application/json; charset=utf-8 2.0077ms
+2024-07-20 18:55:30.465 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:55:30.465 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:55:30.465 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 204 null null 0.6821ms
+2024-07-20 18:55:30.468 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:55:30.468 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:55:30.468 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:55:30.468 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasEmAbertoDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasEmAbertoDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:55:30.468 -03:00 [INF] Endpoint 'SomaDasDespesasEmAbertoDoMes' foi chamado.
+2024-07-20 18:55:30.470 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:55:30.470 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API) in 2.2068ms
+2024-07-20 18:55:30.470 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:55:30.470 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 200 null application/json; charset=utf-8 3.0851ms
+2024-07-20 18:55:30.473 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - null null
+2024-07-20 18:55:30.474 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:55:30.474 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - 204 null null 0.4222ms
+2024-07-20 18:55:30.476 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - null null
+2024-07-20 18:55:30.476 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:55:30.476 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API)'
+2024-07-20 18:55:30.476 -03:00 [INF] Route matched with {action = "ListasDespesasAbertasNoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListasDespesasAbertasNoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:55:30.476 -03:00 [INF] Endpoint 'ListarContasEmAberto' foi chamado.
+2024-07-20 18:55:30.478 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Financas.Pessoais.Domain.DTOs.DespesasDashboardDTO, Financas.Pessoais.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-20 18:55:30.478 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API) in 2.2762ms
+2024-07-20 18:55:30.478 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API)'
+2024-07-20 18:55:30.478 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - 200 null application/json; charset=utf-8 2.9977ms
+2024-07-20 18:56:31.869 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:56:31.869 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:56:31.869 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 204 null null 0.2977ms
+2024-07-20 18:56:31.888 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - null null
+2024-07-20 18:56:31.889 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:56:31.889 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:56:31.889 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:56:31.889 -03:00 [INF] Endpoint 'SomaDasDespesasDoMes' foi chamado.
+2024-07-20 18:56:31.898 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:56:31.898 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API) in 9.0642ms
+2024-07-20 18:56:31.898 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:56:31.898 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-mes?mes=7 - 200 null application/json; charset=utf-8 10.161ms
+2024-07-20 18:56:31.912 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:56:31.912 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:56:31.912 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 204 null null 1.0642ms
+2024-07-20 18:56:31.916 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - null null
+2024-07-20 18:56:31.916 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:56:31.917 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:56:31.917 -03:00 [INF] Route matched with {action = "ObterSomaDaReceitasDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDaReceitasDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:56:31.917 -03:00 [INF] Endpoint 'SomaDasReceitasDoMes' foi chamado.
+2024-07-20 18:56:31.919 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:56:31.919 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API) in 2.1598ms
+2024-07-20 18:56:31.919 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDaReceitasDoMes (Financas.Pessoais.API)'
+2024-07-20 18:56:31.919 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-receitas-mes?mes=7 - 200 null application/json; charset=utf-8 2.7194ms
+2024-07-20 18:56:31.923 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:56:31.923 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:56:31.923 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 204 null null 0.4138ms
+2024-07-20 18:56:31.936 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - null null
+2024-07-20 18:56:31.936 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:56:31.937 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:56:31.937 -03:00 [INF] Route matched with {action = "ObterDiferencaReceitasDespesas", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDiferencaReceitasDespesas(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:56:31.937 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:56:31.948 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:56:31.948 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API) in 10.7199ms
+2024-07-20 18:56:31.948 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDiferencaReceitasDespesas (Financas.Pessoais.API)'
+2024-07-20 18:56:31.948 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/saldo-mes?mes=7 - 200 null application/json; charset=utf-8 12.2184ms
+2024-07-20 18:56:31.958 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:56:31.959 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:56:31.959 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 204 null null 0.2157ms
+2024-07-20 18:56:31.964 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - null null
+2024-07-20 18:56:31.965 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:56:31.965 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:56:31.965 -03:00 [INF] Route matched with {action = "ObterDespesasAVencerDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterDespesasAVencerDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:56:31.965 -03:00 [INF] Endpoint 'DespesasAVencerDoMes' foi chamado.
+2024-07-20 18:56:31.969 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-07-20 18:56:31.969 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API) in 3.6093ms
+2024-07-20 18:56:31.969 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterDespesasAVencerDoMes (Financas.Pessoais.API)'
+2024-07-20 18:56:31.969 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/despesas-a-vencer-mes?mes=7 - 200 null application/json; charset=utf-8 4.8179ms
+2024-07-20 18:56:31.975 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:56:31.975 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:56:31.975 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 204 null null 0.183ms
+2024-07-20 18:56:31.978 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - null null
+2024-07-20 18:56:31.978 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:56:31.979 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:56:31.979 -03:00 [INF] Route matched with {action = "ObterSomaDasDespesasEmAbertoDoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterSomaDasDespesasEmAbertoDoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:56:31.979 -03:00 [INF] Endpoint 'SomaDasDespesasEmAbertoDoMes' foi chamado.
+2024-07-20 18:56:31.983 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Decimal'.
+2024-07-20 18:56:31.984 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API) in 4.625ms
+2024-07-20 18:56:31.984 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ObterSomaDasDespesasEmAbertoDoMes (Financas.Pessoais.API)'
+2024-07-20 18:56:31.984 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/soma-despesas-em-aberto-mes?mes=7 - 200 null application/json; charset=utf-8 5.3033ms
+2024-07-20 18:56:31.991 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - null null
+2024-07-20 18:56:31.992 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:56:31.992 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - 204 null null 0.2102ms
+2024-07-20 18:56:31.995 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - null null
+2024-07-20 18:56:31.995 -03:00 [INF] CORS policy execution successful.
+2024-07-20 18:56:31.995 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API)'
+2024-07-20 18:56:31.995 -03:00 [INF] Route matched with {action = "ListasDespesasAbertasNoMes", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListasDespesasAbertasNoMes(Int32) on controller Financas.Pessoais.API.Controllers.DashboardController (Financas.Pessoais.API).
+2024-07-20 18:56:31.996 -03:00 [INF] Endpoint 'ListarContasEmAberto' foi chamado.
+2024-07-20 18:56:31.998 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Financas.Pessoais.Domain.DTOs.DespesasDashboardDTO, Financas.Pessoais.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-20 18:56:31.998 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API) in 2.5099ms
+2024-07-20 18:56:31.998 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.DashboardController.ListasDespesasAbertasNoMes (Financas.Pessoais.API)'
+2024-07-20 18:56:31.998 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/api/Dashboard/listar-despesas-abertas-mes?mes=7 - 200 null application/json; charset=utf-8 3.7821ms
