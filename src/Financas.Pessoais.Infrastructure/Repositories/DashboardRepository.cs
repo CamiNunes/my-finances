@@ -38,6 +38,26 @@ namespace Financas.Pessoais.Infrastructure.Repositories
             }
         }
 
+        public decimal ObterSomaDasDespesasEmAbertoDoMes(int mes, string emailUsuario)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                // Consulta SQL para obter a soma das despesas do mês
+                string query = @"
+                                SELECT ISNULL(SUM(VALOR), 0) AS VALOR_DESPESA
+                                FROM TB_DESPESAS
+                                WHERE MONTH(DATALANCAMENTO) = @Mes AND 
+                                      PAGO = 0 AND 
+                                      CriadoPor = @EmailUsuario";
+
+                decimal sum = connection.ExecuteScalar<decimal>(query, new { Mes = mes, EmailUsuario = emailUsuario });
+
+                return sum;
+            }
+        }
+
         public int ObterQuantidadeDespesasProximasVencimento(int mes, string emailUsuario)
         {
             using (var connection = new SqlConnection(_connectionString))

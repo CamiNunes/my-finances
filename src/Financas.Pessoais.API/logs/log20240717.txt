@@ -1,0 +1,27 @@
+2024-07-17 17:13:17.173 -03:00 [INF] User profile is available. Using 'C:\Users\Usuário\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-17 17:13:17.584 -03:00 [INF] Now listening on: https://localhost:7192
+2024-07-17 17:13:17.584 -03:00 [INF] Now listening on: http://localhost:5039
+2024-07-17 17:13:17.585 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 17:13:17.586 -03:00 [INF] Hosting environment: Development
+2024-07-17 17:13:17.586 -03:00 [INF] Content root path: Z:\Freelas\projetos-reais\my-finances\src\Financas.Pessoais.API
+2024-07-17 17:13:18.309 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/index.html - null null
+2024-07-17 17:13:18.554 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 17:13:18.555 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/index.html - 200 null text/html;charset=utf-8 256.116ms
+2024-07-17 17:13:18.559 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 5.3166ms
+2024-07-17 17:13:18.588 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/_vs/browserLink - null null
+2024-07-17 17:13:18.644 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.4663ms
+2024-07-17 17:13:18.913 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - null null
+2024-07-17 17:13:19.124 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 210.4251ms
+2024-07-17 17:14:29.709 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7192/api/Auth/login - null null
+2024-07-17 17:14:29.719 -03:00 [INF] CORS policy execution successful.
+2024-07-17 17:14:29.720 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7192/api/Auth/login - 204 null null 11.5369ms
+2024-07-17 17:14:29.726 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7192/api/Auth/login - application/json 55
+2024-07-17 17:14:29.728 -03:00 [INF] CORS policy execution successful.
+2024-07-17 17:14:29.925 -03:00 [INF] Executing endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-07-17 17:14:29.975 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Financas.Pessoais.Domain.Models.LoginModel) on controller Financas.Pessoais.API.Controllers.AuthController (Financas.Pessoais.API).
+2024-07-17 17:14:30.060 -03:00 [INF] Tentativa de login para o email: cvn.camila@gmail.com
+2024-07-17 17:14:31.093 -03:00 [INF] Login bem-sucedido para o email: cvn.camila@gmail.com
+2024-07-17 17:14:31.099 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-17 17:14:31.106 -03:00 [INF] Executed action Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API) in 1128.1487ms
+2024-07-17 17:14:31.107 -03:00 [INF] Executed endpoint 'Financas.Pessoais.API.Controllers.AuthController.Login (Financas.Pessoais.API)'
+2024-07-17 17:14:31.108 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7192/api/Auth/login - 200 null application/json; charset=utf-8 1381.2361ms

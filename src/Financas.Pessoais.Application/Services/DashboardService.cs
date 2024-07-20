@@ -66,6 +66,19 @@ namespace Financas.Pessoais.Application.Services
             return soma;
         }
 
+        public decimal ObterSomaDasDespesasEmAbertoDoMes(int mes)
+        {
+
+            var usuario = _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
+
+            var soma = _dashboardRepository.ObterSomaDasDespesasEmAbertoDoMes(mes, usuario.Result.Email);
+            return soma;
+        }
+
         public decimal ObterSomaDasReceitasDoMes(int mes)
         {
 
@@ -75,7 +88,7 @@ namespace Financas.Pessoais.Application.Services
                 throw new UnauthorizedAccessException("Usuário não autenticado.");
             }
 
-            var soma = _dashboardRepository.ObterSomaDasDespesasDoMes(mes, usuario.Result.Email);
+            var soma = _dashboardRepository.ObterSomaDasReceitasDoMes(mes, usuario.Result.Email);
             return soma;
         }
     }

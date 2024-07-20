@@ -9,6 +9,7 @@ namespace Financas.Pessoais.Application.Interfaces
     public interface IDashboardService
     {
         decimal ObterSomaDasDespesasDoMes(int mes);
+        decimal ObterSomaDasDespesasEmAbertoDoMes(int mes);
         int ObterQuantidadeDespesasProximasVencimento(int mes);
         decimal ObterSomaDasReceitasDoMes(int mes);
         decimal ObterDiferencaReceitasDespesas(int mes);

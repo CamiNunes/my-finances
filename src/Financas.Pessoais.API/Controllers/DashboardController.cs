@@ -40,14 +40,32 @@ namespace Financas.Pessoais.API.Controllers
             }
         }
 
+        [HttpGet("soma-despesas-em-aberto-mes")]
+        public async Task<IActionResult> ObterSomaDasDespesasEmAbertoDoMes(int mes)
+        {
+            try
+            {
+                _logger.LogInformation("Endpoint 'SomaDasDespesasEmAbertoDoMes' foi chamado.");
+
+                var result = _dashboardService.ObterSomaDasDespesasEmAbertoDoMes(mes);
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao processar a solicitação.");
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
+        }
+
         [HttpGet("soma-receitas-mes")]
         public async Task<IActionResult> ObterSomaDaReceitasDoMes(int mes)
         {
             try
             {
-                _logger.LogInformation("Endpoint 'SomaDasDespesasDoMes' foi chamado.");
+                _logger.LogInformation("Endpoint 'SomaDasReceitasDoMes' foi chamado.");
 
-                var result = _dashboardService.ObterSomaDasDespesasDoMes(mes);
+                var result = _dashboardService.ObterSomaDasReceitasDoMes(mes);
 
                 return Ok(result);
             }
