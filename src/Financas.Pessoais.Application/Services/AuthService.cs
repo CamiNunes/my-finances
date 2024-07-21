@@ -84,10 +84,10 @@ namespace Financas.Pessoais.Application.Services
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.UTF8.GetBytes(_jwtKey);
             var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Name, user.Username),
-            new Claim("email", user.Email)
-        };
+            {
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim("email", user.Email)
+            };
 
             if (user.IsAdmin)
             {

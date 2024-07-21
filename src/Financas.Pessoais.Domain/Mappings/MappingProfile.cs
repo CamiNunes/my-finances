@@ -14,6 +14,9 @@ namespace Financas.Pessoais.Domain.Mappings
             CreateMap<DespesasInputModel, Despesas>()
                 .ForMember(dest => dest.DataPagamento, opt => opt.MapFrom(src => src.DataPagamento));
 
+            CreateMap<DespesasUpdateModel, Despesas>()
+                .ForMember(dest => dest.DataPagamento, opt => opt.MapFrom(src => src.DataPagamento));
+
             CreateMap<ReceitasInputModel, Receitas>();
 
             CreateMap<DespesasViewModel, Despesas>();

@@ -119,5 +119,16 @@ namespace Financas.Pessoais.Application.Services
 
             await _despesasRepository.ExcluirDespesaAsync(despesaId, usuario.Email);
         }
+
+        public async Task AlterarDespesaAsync(DespesasUpdateModel despesa)
+        {
+            var usuario = await _userContext.GetAuthenticatedUserAsync();
+            if (usuario == null)
+            {
+                throw new UnauthorizedAccessException("Usuário não autenticado.");
+            }
+
+            await _despesasRepository.AlterarDespesaAsync(despesa, usuario.Email);
+        }
     }
 }

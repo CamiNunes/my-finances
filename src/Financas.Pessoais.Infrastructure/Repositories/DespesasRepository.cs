@@ -36,6 +36,39 @@ namespace Financas.Pessoais.Infrastructure.Repositories
             }
         }
 
+        public async Task AlterarDespesaAsync(DespesasUpdateModel despesa, string emailUsuario)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var sql = @"UPDATE TB_DESPESAS 
+                    SET Valor = @Valor, 
+                        Descricao = @Descricao, 
+                        Pago = @Pago, 
+                        DataVencimento = @DataVencimento, 
+                        DataPagamento = @DataPagamento, 
+                        TipoDespesa = @TipoDespesa, 
+                        Categoria = @Categoria
+                    WHERE Id = @Id";
+
+                var parameters = new
+                {
+                    Id = despesa.Id, // Assumindo que o modelo de atualização inclui um Id para identificar a despesa a ser alterada
+                    Valor = despesa.Valor,
+                    Descricao = despesa.Descricao,
+                    Pago = despesa.Pago,
+                    DataVencimento = despesa.DataVencimento,
+                    DataPagamento = despesa.DataPagamento.HasValue && despesa.DataPagamento.Value >= (DateTime)SqlDateTime.MinValue ? despesa.DataPagamento.Value : (object)DBNull.Value,
+                    TipoDespesa = despesa.TipoDespesa,
+                    Categoria = despesa.Categoria,
+                    //ModificadoPor = emailUsuario,
+                    //DataModificacao = DateTime.UtcNow // Presumindo que você deseja registrar a data/hora da modificação
+                };
+
+                await connection.ExecuteAsync(sql, parameters);
+            }
+        }
+
+
         public async Task<IEnumerable<Despesas>> ObterDespesasAsync(string emailUsuario, int? mes = null, string status = null, string descricao = null)
         {
             using (var connection = new SqlConnection(connectionString))

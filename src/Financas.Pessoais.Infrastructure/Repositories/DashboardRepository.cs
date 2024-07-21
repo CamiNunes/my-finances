@@ -136,7 +136,8 @@ namespace Financas.Pessoais.Infrastructure.Repositories
 	                                TB_DESPESAS 
                                   WHERE 
 	                                MONTH(DATAVENCIMENTO) = @Mes AND 
-                                    CriadoPor = @EmailUsuario";
+                                    CriadoPor = @EmailUsuario AND
+	                                Pago = 0";
 
                 var despesas = connection.Query<DespesasDashboardDTO>(query, new { Mes = mes, EmailUsuario = emailUsuario }).ToList();
 

@@ -54,6 +54,34 @@ namespace Financas.Pessoais.API.Controllers
             }
         }
 
+        [HttpPut("alterar-despesa")]
+        public async Task<IActionResult> AlterarDespesa(DespesasUpdateModel depesasUpdateModel)
+        {
+            try
+            {
+                _logger.LogInformation("Iniciando a alteração de uma despesa.");
+
+                var contract = new DespesasUpdateModelContrato(depesasUpdateModel);
+                if (!contract.IsValid)
+                {
+                    _logger.LogWarning("Dados de entrada inválidos para a despesa: {Erros}", contract.Notifications);
+                    return BadRequest(contract.Notifications);
+                }
+
+                var despesaAlterada = _mapper.Map<Despesas>(depesasUpdateModel);
+
+                await _despesasService.AlterarDespesaAsync(depesasUpdateModel);
+
+                _logger.LogInformation("Despesa atualizada com sucesso: {Despesa}", despesaAlterada);
+                return Ok(despesaAlterada);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao incluir nova despesa.");
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+            }
+        }
+
         [HttpGet("listar-despesas")]
         public async Task<IActionResult> ObterDespesas([FromQuery] int? mes = null, [FromQuery] string status = null, [FromQuery] string descricao = null)
         {
