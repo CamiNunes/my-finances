@@ -83,13 +83,19 @@ namespace Financas.Pessoais.API.Controllers
         }
 
         [HttpGet("listar-despesas")]
-        public async Task<IActionResult> ObterDespesas([FromQuery] int? mes = null, [FromQuery] string status = null, [FromQuery] string descricao = null)
+        public async Task<IActionResult> ObterDespesas([FromQuery] int? mes = null, [FromQuery] string status = null, [FromQuery] string descricao = null, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 5)
         {
             try
             {
-                var result = await _despesasService.ObterDespesasAsync(mes, status, descricao);
+                var paginationParameters = new PaginationParameters
+                {
+                    PageNumber = pageNumber,
+                    PageSize = pageSize
+                };
 
-                if (result == null || !result.Any())
+                var result = await _despesasService.ObterDespesasAsync(mes, status, descricao, paginationParameters);
+
+                if (result == null || !result.Items.Any())
                 {
                     _logger.LogWarning("Nenhuma despesa encontrada.");
                     return NotFound("Nenhuma despesa encontrada.");
@@ -104,6 +110,7 @@ namespace Financas.Pessoais.API.Controllers
                 return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
             }
         }
+
 
         [HttpGet("despesas/{descricao}")]
         public async Task<IActionResult> ObterDespesasPorDescricao(string descricao)

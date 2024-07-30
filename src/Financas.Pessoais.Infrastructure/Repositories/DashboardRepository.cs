@@ -29,7 +29,7 @@ namespace Financas.Pessoais.Infrastructure.Repositories
                 string query = @"
                                 SELECT ISNULL(SUM(VALOR), 0) AS VALOR_DESPESA
                                 FROM TB_DESPESAS
-                                WHERE MONTH(DATALANCAMENTO) = @Mes AND 
+                                WHERE MONTH(DATAVENCIMENTO) = @Mes AND 
                                       PAGO = 1 AND 
                                       CriadoPor = @EmailUsuario";
 
@@ -49,7 +49,7 @@ namespace Financas.Pessoais.Infrastructure.Repositories
                 string query = @"
                                 SELECT ISNULL(SUM(VALOR), 0) AS VALOR_DESPESA
                                 FROM TB_DESPESAS
-                                WHERE MONTH(DATALANCAMENTO) = @Mes AND 
+                                WHERE MONTH(DATAVENCIMENTO) = @Mes AND 
                                       PAGO = 0 AND 
                                       CriadoPor = @EmailUsuario";
 
@@ -111,7 +111,7 @@ namespace Financas.Pessoais.Infrastructure.Repositories
                                 SELECT 
                                     (ISNULL((SELECT SUM(VALOR) 
                                              FROM TB_RECEITAS 
-                                             WHERE CriadoPor = @EmailUsuario AND RECEBIDO = 1 AND MONTH(DATALANCAMENTO) = @Mes), 0) 
+                                             WHERE CriadoPor = @EmailUsuario AND RECEBIDO = 1 AND MONTH(DATAVENCIMENTO) = @Mes), 0) 
                                     - ISNULL((SELECT SUM(VALOR) 
                                               FROM TB_DESPESAS 
                                               WHERE CriadoPor = @EmailUsuario AND PAGO = 1 AND MONTH(DATAVENCIMENTO) = @Mes), 0)) AS DIFERENCA";

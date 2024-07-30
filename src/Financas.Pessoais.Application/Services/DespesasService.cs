@@ -42,7 +42,7 @@ namespace Financas.Pessoais.Application.Services
             await _despesasRepository.IncluirDespesaAsync(novaDespesa, usuario.Email);
         }
 
-        public async Task<IEnumerable<DespesasViewModel>> ObterDespesasAsync(int? mes = null, string status = null, string descricao = null)
+        public async Task<PagedResult<DespesasViewModel>> ObterDespesasAsync(int? mes, string status, string descricao, PaginationParameters paginationParameters)
         {
             var usuario = await _userContext.GetAuthenticatedUserAsync();
             if (usuario == null)
@@ -50,9 +50,11 @@ namespace Financas.Pessoais.Application.Services
                 throw new UnauthorizedAccessException("Usuário não autenticado.");
             }
 
-            var despesas = await _despesasRepository.ObterDespesasAsync(usuario.Email, mes, status, descricao);
+            // Obter despesas paginadas
+            var despesasPaginadas = await _despesasRepository.ObterDespesasAsync(usuario.Email, mes, status, descricao, paginationParameters);
 
-            var despesasViewModel = despesas.Select(despesa => new DespesasViewModel
+            // Converter para ViewModel
+            var despesasViewModel = despesasPaginadas.Items.Select(despesa => new DespesasViewModel
             {
                 Id = despesa.Id,
                 Valor = despesa.Valor,
@@ -67,37 +69,11 @@ namespace Financas.Pessoais.Application.Services
                                 : "ABERTO"
             }).ToList();
 
-            return despesasViewModel;
+            // Retornar PagedResult com ViewModel
+            return new PagedResult<DespesasViewModel>(despesasViewModel, despesasPaginadas.TotalCount, paginationParameters.PageNumber, paginationParameters.PageSize);
         }
 
-        public async Task<IEnumerable<DespesasViewModel>> ObterDespesasAsync()
-        {
-            var usuario = await _userContext.GetAuthenticatedUserAsync();
-            if (usuario == null)
-            {
-                throw new UnauthorizedAccessException("Usuário não autenticado.");
-            }
-
-            var despesas = await _despesasRepository.ObterDespesasAsync(usuario.Email);
-
-            var despesasViewModel = despesas.Select(despesa => new DespesasViewModel
-            {
-                Id = despesa.Id,
-                Valor = despesa.Valor,
-                Descricao = despesa.Descricao,
-                Pago = despesa.Pago,
-                DataVencimento = despesa.DataVencimento,
-                DataPagamento = despesa.DataPagamento,
-                TipoDespesa = despesa.TipoDespesa,
-                Categoria = despesa.Categoria,
-                StatusDespesa = despesa.Pago ? "PAGO"
-                                : despesa.DataVencimento <= DateTime.UtcNow ? "VENCIDO"
-                                : "ABERTO"
-            }).ToList();
-
-            return despesasViewModel;
-        }
-
+       
         public async Task<IEnumerable<DespesasViewModel>> ObterDespesasPorDescricaoAsync(string descricao)
         {
             var usuario = await _userContext.GetAuthenticatedUserAsync();

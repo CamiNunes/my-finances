@@ -8,7 +8,7 @@ namespace Financas.Pessoais.Infrastructure.Interfaces
     {
         Task IncluirDespesaAsync(DespesasInputModel receita, string emailUsuario);
         Task AlterarDespesaAsync(DespesasUpdateModel despesa, string emailUsuario);
-        Task<IEnumerable<Despesas>> ObterDespesasAsync(string emailUsuario, int? mes = null, string status = null, string descricao = null);
+        Task<PagedResult<Despesas>> ObterDespesasAsync(string emailUsuario, int? mes = null, string status = null, string descricao = null, PaginationParameters paginationParameters = null);
         Task<IEnumerable<DespesasViewModel>> ObterDespesasPorDescricaoAsync(string descricao, string emailUsuario);
         Task ExcluirDespesaAsync(Guid despesaId, string emailUsuario);
     }

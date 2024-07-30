@@ -69,17 +69,29 @@ namespace Financas.Pessoais.Infrastructure.Repositories
         }
 
 
-        public async Task<IEnumerable<Despesas>> ObterDespesasAsync(string emailUsuario, int? mes = null, string status = null, string descricao = null)
+        public async Task<PagedResult<Despesas>> ObterDespesasAsync(
+                                                                    string emailUsuario,
+                                                                    int? mes = null,
+                                                                    string status = null,
+                                                                    string descricao = null,
+                                                                    PaginationParameters paginationParameters = null)                       
         {
+            if (paginationParameters == null)
+            {
+                paginationParameters = new PaginationParameters();
+            }
+
             using (var connection = new SqlConnection(connectionString))
             {
                 var sql = "SELECT * FROM TB_DESPESAS WHERE CriadoPor = @CriadoPor";
+                var sqlCount = "SELECT COUNT(*) FROM TB_DESPESAS WHERE CriadoPor = @CriadoPor";
                 var parameters = new DynamicParameters();
                 parameters.Add("CriadoPor", emailUsuario);
 
                 if (mes.HasValue)
                 {
                     sql += " AND MONTH(DataVencimento) = @Mes";
+                    sqlCount += " AND MONTH(DataVencimento) = @Mes";
                     parameters.Add("Mes", mes.Value);
                 }
 
@@ -88,15 +100,18 @@ namespace Financas.Pessoais.Infrastructure.Repositories
                     if (status.Equals("PAGO", StringComparison.OrdinalIgnoreCase))
                     {
                         sql += " AND Pago = 1";
+                        sqlCount += " AND Pago = 1";
                     }
                     else if (status.Equals("VENCIDO", StringComparison.OrdinalIgnoreCase))
                     {
                         sql += " AND Pago = 0 AND DataVencimento <= @DataAtual";
+                        sqlCount += " AND Pago = 0 AND DataVencimento <= @DataAtual";
                         parameters.Add("DataAtual", DateTime.UtcNow);
                     }
                     else if (status.Equals("ABERTO", StringComparison.OrdinalIgnoreCase))
                     {
                         sql += " AND Pago = 0 AND DataVencimento > @DataAtual";
+                        sqlCount += " AND Pago = 0 AND DataVencimento > @DataAtual";
                         parameters.Add("DataAtual", DateTime.UtcNow);
                     }
                 }
@@ -104,21 +119,22 @@ namespace Financas.Pessoais.Infrastructure.Repositories
                 if (!string.IsNullOrEmpty(descricao))
                 {
                     sql += " AND Descricao LIKE @Descricao";
+                    sqlCount += " AND Descricao LIKE @Descricao";
                     parameters.Add("Descricao", "%" + descricao + "%");
                 }
 
-                return await connection.QueryAsync<Despesas>(sql, parameters);
+                var totalCount = await connection.ExecuteScalarAsync<int>(sqlCount, parameters);
+
+                sql += " ORDER BY Descricao OFFSET @Offset ROWS FETCH NEXT @PageSize ROWS ONLY";
+                parameters.Add("Offset", (paginationParameters.PageNumber - 1) * paginationParameters.PageSize);
+                parameters.Add("PageSize", paginationParameters.PageSize);
+
+                var items = await connection.QueryAsync<Despesas>(sql, parameters);
+
+                return new PagedResult<Despesas>(items, totalCount, paginationParameters.PageNumber, paginationParameters.PageSize);
             }
         }
 
-        public async Task<IEnumerable<Despesas>> ObterDespesasAsync(string emailUsuario)
-        {
-            using (var connection = new SqlConnection(connectionString))
-            {
-                var sql = "SELECT * FROM TB_DESPESAS WHERE CriadoPor = @CriadoPor";
-                return await connection.QueryAsync<Despesas>(sql, new {  CriadoPor = emailUsuario });
-            }
-        }
 
         public async Task<IEnumerable<DespesasViewModel>> ObterDespesasPorDescricaoAsync(string descricao, string emailUsuario)
         {
