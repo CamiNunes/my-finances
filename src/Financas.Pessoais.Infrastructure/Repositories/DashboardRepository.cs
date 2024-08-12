@@ -111,7 +111,7 @@ namespace Financas.Pessoais.Infrastructure.Repositories
                                 SELECT 
                                     (ISNULL((SELECT SUM(VALOR) 
                                              FROM TB_RECEITAS 
-                                             WHERE CriadoPor = @EmailUsuario AND RECEBIDO = 1 AND MONTH(DATAVENCIMENTO) = @Mes), 0) 
+                                             WHERE CriadoPor = @EmailUsuario AND RECEBIDO = 1 AND MONTH(DATARECEBIMENTO) = @Mes), 0) 
                                     - ISNULL((SELECT SUM(VALOR) 
                                               FROM TB_DESPESAS 
                                               WHERE CriadoPor = @EmailUsuario AND PAGO = 1 AND MONTH(DATAVENCIMENTO) = @Mes), 0)) AS DIFERENCA";
